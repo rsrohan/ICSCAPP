@@ -12,7 +12,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_send">Contact Us</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -30,9 +30,11 @@
         Organized by ECE Department\n
 Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     LOGIN TO CONTINUE</string>
-    <string name="speakers">Speakers</string>
+    <string name="speakers">Invited Speakers</string>
     <string name="schedules">Schedule</string>
     <string name="paperStatus">Paper Status</string>
-    <string name="prevConf">Previous Conferences</string>
+    <string name="prevConf">ICSC Previous Editions</string>
     <string name="logout">Sign Out</string>
+    <string name="menu_navigate">navigate to location</string>
+    <string name="title_activity_maps">GoogleMaps</string>
 </resources>
