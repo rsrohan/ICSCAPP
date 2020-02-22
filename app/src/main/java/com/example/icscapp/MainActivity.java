@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
            FirebaseAuth.getInstance().signOut();
            startActivity(new Intent(this, LoginActivity.class));
+           finish();
         }
         return super.onOptionsItemSelected(item);
 

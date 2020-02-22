@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,14 +22,17 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAdapterForSpeakers.MyHolder> {
     Context context;
     ArrayList<Speakers> speakersArrayList;
+    StorageReference storageReference;
 
     Activity activity;
     public RecyclerAdapterForSpeakers(ArrayList<Speakers> speakersArrayList, Context context, Activity activity) {
@@ -53,21 +55,32 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
         Log.d("Tag", "onBindViewHolder: "+speakers.getName());
 
         try{
-            Glide.with(context).asBitmap().load("gs://icsc-app-b1ddb.appspot.com/james.jpg").addListener(new RequestListener<Bitmap>() {
+            storageReference = FirebaseStorage.getInstance().getReference("speakers").child(speakers.getImage());
+            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
-                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                    Log.d("TAG", "onLoadFailed: "+e);
-                    return false;
-                }
+                public void onSuccess(Uri uri) {
+                    Glide.with(context).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
+                            Log.d("TAG", "onLoadFailed: "+e);
+                            return false;
+                        }
 
-                @Override
-                public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-                    holder.image.setImageBitmap(resource);
-                    Log.d("TAG", "onResourceReady: "+resource);
-                    return false;
+                        @Override
+                        public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
+                            holder.image.setImageBitmap(resource);
+                            Log.d("TAG", "onResourceReady: "+resource);
+                            return false;
+                        }
+                    }).submit();
                 }
-            }).submit();
-            //holder.image.setImageURI(Uri.parse(speakers.getImage()));
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+
+                }
+            });
+
 
         }catch (Exception e){
             Log.d("TAG", "onBindViewHolder: "+e);
@@ -95,7 +108,7 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
     public class MyHolder extends RecyclerView.ViewHolder {
 
         TextView name, from;
-        CircleImageView image;
+        ImageView image;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.imageOfSpeaker);

@@ -38,4 +38,7 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="menu_navigate">navigate to location</string>
     <string name="title_activity_maps">GoogleMaps</string>
     <string name="contactUs">Contact Us</string>
+    <string name="icsc_2020">ICSC 2020</string>
+    <string name="technically_co_sponsored_by">Technically Co-Sponsored by:</string>
+    <string name="financially_co_sponsered_by">Financially Co-Sponsered by:</string>
 </resources>

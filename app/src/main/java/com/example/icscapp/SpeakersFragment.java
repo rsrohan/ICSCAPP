@@ -21,6 +21,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -61,6 +63,7 @@ public class SpeakersFragment extends Fragment {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                 {
                     Speakers s = dataSnapshot1.getValue(Speakers.class);
+                    assert s != null;
                     Log.d("Tag", "onDataChange: "+s.getName());
                     speakersArrayList.add(s);
                 }

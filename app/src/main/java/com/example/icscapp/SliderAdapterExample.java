@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.EncodeStrategy;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 import java.util.ArrayList;
@@ -29,15 +32,6 @@ public class SliderAdapterExample extends
         notifyDataSetChanged();
     }
 
-    public void deleteItem(int position) {
-        this.mSliderItems.remove(position);
-        notifyDataSetChanged();
-    }
-
-    public void addItem(SliderItem sliderItem) {
-        this.mSliderItems.add(sliderItem);
-        notifyDataSetChanged();
-    }
 
     @Override
     public SliderAdapterVH onCreateViewHolder(ViewGroup parent) {
@@ -54,7 +48,7 @@ public class SliderAdapterExample extends
         viewHolder.textViewDescription.setTextSize(16);
         viewHolder.textViewDescription.setTextColor(Color.WHITE);
         Glide.with(viewHolder.itemView)
-                .load(sliderItem.getImageUrl())
+                .load(sliderItem.getImageUrl()).diskCacheStrategy(DiskCacheStrategy.ALL)
                 .fitCenter()
                 .into(viewHolder.imageViewBackground);
 
