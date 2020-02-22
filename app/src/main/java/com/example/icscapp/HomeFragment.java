@@ -1,4 +1,4 @@
-package com.example.icscapp.ui.home;
+package com.example.icscapp;
 
 import android.graphics.Color;
 import android.os.Bundle;

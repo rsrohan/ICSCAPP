@@ -1,4 +1,4 @@
-package com.example.icscapp.ui.gallery;
+package com.example.icscapp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,13 +18,11 @@ import com.example.icscapp.R;
 
 public class GalleryFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         ViewPager vp= root.findViewById(R.id.imageSlider);

@@ -1,4 +1,4 @@
-package com.example.icscapp.ui.contactUs;
+package com.example.icscapp;
 
 import android.Manifest;
 import android.content.Intent;
@@ -19,7 +19,9 @@ import androidx.fragment.app.Fragment;
 import com.example.icscapp.MapsActivity;
 import com.example.icscapp.R;
 
-public class SendFragment extends Fragment {
+import java.util.Objects;
+
+public class ContactUsFragment extends Fragment {
 
     private TextView institute, address, email, website, epbax, phone, fax;
     private Button call, direction;
@@ -28,7 +30,7 @@ public class SendFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        View root = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
         institute = root.findViewById(R.id.institute);
         address = root.findViewById(R.id.address);
@@ -56,7 +58,7 @@ public class SendFragment extends Fragment {
 
                 callbtn.setData(Uri.parse("tel:" + number));
 
-                if(ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(Objects.requireNonNull(getActivity()), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(getActivity(),"please grant permission to call", Toast.LENGTH_SHORT).show();
                     requestPermission();
                 }
@@ -78,6 +80,6 @@ public class SendFragment extends Fragment {
     }
 
     private void requestPermission(){
-        ActivityCompat.requestPermissions(getActivity(),new String[] {Manifest.permission.CALL_PHONE}, 1);
+        ActivityCompat.requestPermissions(Objects.requireNonNull(getActivity()),new String[] {Manifest.permission.CALL_PHONE}, 1);
     }
 }
