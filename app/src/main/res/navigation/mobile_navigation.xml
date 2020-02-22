@@ -10,7 +10,26 @@
         android:name="com.example.icscapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
+    <fragment
+        android:id="@+id/schedules"
+        android:name="com.example.icscapp.ScheduleFragment"
+        android:label="@string/schedules"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/speakers"
+        android:name="com.example.icscapp.SpeakersFragment"
+        android:label="@string/speakers"
+        tools:layout="@layout/fragment_speakers" />
+    <fragment
+        android:id="@+id/paperStatus"
+        android:name="com.example.icscapp.PaperStatusFragment"
+        android:label="@string/paperStatus"
+        tools:layout="@layout/fragment_paper_status" />
+    <fragment
+        android:id="@+id/prevConf"
+        android:name="com.example.icscapp.PrevConfFragment"
+        android:label="@string/prevConf"
+        tools:layout="@layout/fragment_prev_conf" />
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.icscapp.ui.gallery.GalleryFragment"

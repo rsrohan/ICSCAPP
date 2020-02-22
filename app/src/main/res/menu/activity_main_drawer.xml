@@ -6,8 +6,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_event_available_black_24dp"
             android:title="@string/menu_home" />
+        <item
+            android:id="@+id/schedules"
+            android:icon="@drawable/ic_schedule_black_24dp"
+            android:title="@string/schedules" />
+        <item
+            android:id="@+id/speakers"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="@string/speakers" />
+        <item
+            android:id="@+id/paperStatus"
+            android:icon="@drawable/ic_find_in_page_black_24dp"
+            android:title="@string/paperStatus" />
+        <item
+            android:id="@+id/prevConf"
+            android:icon="@drawable/ic_folder_special_black_24dp"
+            android:title="@string/prevConf" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"

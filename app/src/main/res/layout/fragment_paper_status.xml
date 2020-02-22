@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PaperStatusFragment">
+
+    <TextView
+        android:id="@+id/paperId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="paperid" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="demo information here is a need for providing a forum to scientists and researchers to discuss and put forward their ideas and research findings with the co-researchers from all over the world. ICSC 2020 will provide an opportunity to highlight recent developments and to identify emerging and future areas of growth in these fields. It will further give impetus to the researchers for proposing novel efficient techniques.
+
+" />
+
+</LinearLayout>

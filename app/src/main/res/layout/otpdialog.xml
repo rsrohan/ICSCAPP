@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="8dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_wait_while_we_re_detecting_otp_automatically"
+        android:id="@+id/message"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_below="@id/message"
+        android:id="@+id/OTP"
+        android:hint="@string/otp"
+        android:visibility="gone"
+        android:inputType="number"
+        android:background="@drawable/buttons_colorprimary_bg"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OTP"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:text="@string/verify"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:id="@+id/verify"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verify"
+        android:text="@string/resend_otp"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:id="@+id/resendOTP"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:layout_below="@+id/message"
+        android:padding="8dp"
+        />
+
+
+</RelativeLayout>

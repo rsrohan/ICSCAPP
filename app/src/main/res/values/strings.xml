@@ -2,8 +2,8 @@
     <string name="app_name">ICSC APP</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
+    <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -13,4 +13,26 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="tap_to_select_date_of_birth">select date of birth</string>
+    <string name="please_wait_while_we_re_detecting_otp_automatically">Please wait while OTP is detecting automatically.</string>
+    <string name="otp">OTP</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="entermanuallymessage">Enter OTP manually</string>
+
+    <string name="main_message">2020 6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION \n
+        (ICSC-2020)\n
+        March 5th-7th, 2020\n
+        Organized by ECE Department\n
+Jaypee Institute of Information Technology, Noida (INDIA)\n\n
+    LOGIN TO CONTINUE</string>
+    <string name="speakers">Speakers</string>
+    <string name="schedules">Schedule</string>
+    <string name="paperStatus">Paper Status</string>
+    <string name="prevConf">Previous Conferences</string>
+    <string name="logout">Sign Out</string>
 </resources>
