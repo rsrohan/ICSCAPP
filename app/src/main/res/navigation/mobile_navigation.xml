@@ -54,14 +54,9 @@
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
-    <fragment
-        android:id="@+id/nav_navigate"
-        android:name="com.example.icscapp.ui.navigate"
-        android:label="@string/menu_navigate"
-        tools:layout="@layout/fragment_navigate"/>
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.icscapp.ui.contactUs.SendFragment"
+        android:name="com.example.icscapp.ContactUsFragment"
         android:label="@string/menu_send" />
 </navigation>

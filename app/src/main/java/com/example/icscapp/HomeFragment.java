@@ -47,7 +47,9 @@ public class HomeFragment extends Fragment {
 
         information = root.findViewById(R.id.information);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("ICSC2020");
+        FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+        //firebaseDatabase.setPersistenceEnabled(true);
+        databaseReference = firebaseDatabase.getReference("ICSC2020");
         databaseReference.keepSynced(true);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

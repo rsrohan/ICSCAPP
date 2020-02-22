@@ -37,4 +37,5 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="logout">Sign Out</string>
     <string name="menu_navigate">navigate to location</string>
     <string name="title_activity_maps">GoogleMaps</string>
+    <string name="contactUs">Contact Us</string>
 </resources>
