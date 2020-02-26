@@ -54,37 +54,43 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
         final Speakers speakers =speakersArrayList.get(position);
         Log.d("Tag", "onBindViewHolder: "+speakers.getName());
 
-        try{
-            storageReference = FirebaseStorage.getInstance().getReference("speakers").child(speakers.getImage());
-            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                @Override
-                public void onSuccess(Uri uri) {
-                    Glide.with(context).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
+
+        activity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    storageReference = FirebaseStorage.getInstance().getReference("speakers").child(speakers.getImage());
+                    storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
-                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                            Log.d("TAG", "onLoadFailed: "+e);
-                            return false;
+                        public void onSuccess(Uri uri) {
+                            Glide.with(context).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
+                                @Override
+                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
+                                    Log.d("TAG", "onLoadFailed: "+e);
+                                    return false;
+                                }
+
+                                @Override
+                                public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
+
+                                    try{
+                                        holder.image.setImageBitmap(resource);
+                                    }catch (Exception e){}
+                                    Log.d("TAG", "onResourceReady: "+resource);
+                                    return false;
+                                }
+                            }).submit();
                         }
+                    });
 
-                        @Override
-                        public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-                            holder.image.setImageBitmap(resource);
-                            Log.d("TAG", "onResourceReady: "+resource);
-                            return false;
-                        }
-                    }).submit();
+
+                }catch (Exception e){
+                    Log.d("TAG", "onBindViewHolder: "+e);
                 }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-
-                }
-            });
+            }
+        });
 
 
-        }catch (Exception e){
-            Log.d("TAG", "onBindViewHolder: "+e);
-        }
         holder.name.setText(speakers.getName());
         holder.from.setText(speakers.getFrom());
         holder.image.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +103,7 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
 
     private void showDetailsofSpeaker(Speakers speakers) {
 
-       showAlert(speakers.getAbout());
+      // showAlert(speakers.getAbout());
     }
 
     @Override
@@ -116,23 +122,23 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
             from = itemView.findViewById(R.id.aboutSpeaker);
         }
     }
-    public void showAlert(String s){
-
-
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity);
-        LayoutInflater inflater = activity.getLayoutInflater();
-        View alertDialogView = inflater.inflate(R.layout.about_speaker_dialog, null);
-        alertDialog.setView(alertDialogView);
-
-        TextView textDialog = (TextView) alertDialogView.findViewById(R.id.aboutSpeaker);
-        textDialog.setText(s);
-
-        alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-        alertDialog.show();
-
-    }
+//    public void showAlert(String s){
+//
+//
+//        AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity);
+//        LayoutInflater inflater = activity.getLayoutInflater();
+//        View alertDialogView = inflater.inflate(R.layout.about_speaker_dialog, null);
+//        alertDialog.setView(alertDialogView);
+//
+//        TextView textDialog = (TextView) alertDialogView.findViewById(R.id.aboutSpeaker);
+//        textDialog.setText(s);
+//
+//        alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.cancel();
+//            }
+//        });
+//        alertDialog.show();
+//
+//    }
 }

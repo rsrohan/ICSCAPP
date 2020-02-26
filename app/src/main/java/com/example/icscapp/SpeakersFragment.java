@@ -31,7 +31,6 @@ public class SpeakersFragment extends Fragment {
 
     DatabaseReference databaseReference;
     RecyclerView recyclerView;
-    private OnFragmentInteractionListener mListener;
     ProgressBar progressBar;
 
     public SpeakersFragment() {
@@ -56,61 +55,42 @@ public class SpeakersFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         progressBar = v.findViewById(R.id.progressbar);
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        getActivity().runOnUiThread(new Runnable() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<Speakers> speakersArrayList = new ArrayList<>();
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
-                {
-                    Speakers s = dataSnapshot1.getValue(Speakers.class);
-                    assert s != null;
-                    Log.d("Tag", "onDataChange: "+s.getName());
-                    speakersArrayList.add(s);
-                }
-                RecyclerAdapterForSpeakers r= new RecyclerAdapterForSpeakers(speakersArrayList, getContext(), getActivity());
-                r.notifyDataSetChanged();
-                progressBar.setVisibility(View.GONE);
-                recyclerView.setAdapter(r);
-                //Toast.makeText(getContext(), ""+speakersArrayList.size(), Toast.LENGTH_SHORT).show();
+            public void run() {
+                databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        ArrayList<Speakers> speakersArrayList = new ArrayList<>();
+                        for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
+                        {
+                            Speakers s = dataSnapshot1.getValue(Speakers.class);
+                            assert s != null;
+                            Log.d("Tag", "onDataChange: "+s.getName());
+                            speakersArrayList.add(s);
+                        }
+                        RecyclerAdapterForSpeakers r= new RecyclerAdapterForSpeakers(speakersArrayList, getContext(), getActivity());
+                        r.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setAdapter(r);
+                        //Toast.makeText(getContext(), ""+speakersArrayList.size(), Toast.LENGTH_SHORT).show();
 
-            }
+                    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                    }
+                });
             }
         });
+
 
         return v;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
 
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
 }
