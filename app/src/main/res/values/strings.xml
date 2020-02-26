@@ -3,7 +3,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
-    <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department</string>
+    <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida (INDIA)</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -13,32 +13,39 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Contact Us</string>
+    <string name="menu_contact">Contact Us</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">Login</string>
     <string name="tap_to_select_date_of_birth">select date of birth</string>
+    <string name="Authority_number">+911202594322</string>
     <string name="please_wait_while_we_re_detecting_otp_automatically">Please wait while OTP is detecting automatically.</string>
     <string name="otp">OTP</string>
     <string name="verify">Verify</string>
     <string name="resend_otp">Resend OTP</string>
     <string name="entermanuallymessage">Enter OTP manually</string>
-
+    <string name="about_jiit">Jaypee Institute of Information Technology (JIIT) was founded in 2001 with the vision of becoming a centre of excellence in the field of IT and related emerging areas of education, training and research comparable to the best in the world for producing professionals who shall be leaders in innovation, entrepreneurship, creativity and management. JIIT has been ranked 80th in the all India rank 2019 in engineering category by NIRF, Ministry of HRD, Government of India.</string>
+    <string name="Email">webadmin@jiit.ac.in</string>
     <string name="main_message">2020 6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION \n
         (ICSC-2020)\n
         March 5th-7th, 2020\n
         Organized by ECE Department\n
 Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     LOGIN TO CONTINUE</string>
-    <string name="speakers">Invited Speakers</string>
+    <string name="speakers">Keynote Speakers</string>
     <string name="schedules">Schedule</string>
     <string name="paperStatus">Paper Status</string>
     <string name="prevConf">ICSC Previous Editions</string>
     <string name="logout">Sign Out</string>
-    <string name="menu_navigate">navigate to location</string>
+    <string name="menu_navigate">Navigate to Location</string>
     <string name="title_activity_maps">GoogleMaps</string>
     <string name="contactUs">Contact Us</string>
     <string name="icsc_2020">ICSC 2020</string>
     <string name="technically_co_sponsored_by">Technically Co-Sponsored by:</string>
     <string name="financially_co_sponsered_by">Financially Co-Sponsered by:</string>
+    <string name="about_us">About JIIT</string>
+    <string name="communicate">Communicate</string>
+    <string name="call">call</string>
+
 </resources>

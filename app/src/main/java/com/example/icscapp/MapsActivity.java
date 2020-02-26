@@ -18,7 +18,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -63,7 +65,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onSuccess(Location location) {
                 if(location != null){
                     currLocation = location;
-                   // Toast.makeText(getApplicationContext(),currLocation.getLatitude() + " " + currLocation.getLongitude(),Toast.LENGTH_SHORT).show();
+                   //a Toast.makeText(getApplicationContext(),currLocation.getLatitude() + " " + currLocation.getLongitude(),Toast.LENGTH_SHORT).show();
 
 
                     SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -97,11 +99,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         destination = new MarkerOptions().position(new LatLng(28.629842, 77.372095)).title("Destination JIIT 62");
         mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 30.0f));
-        mMap.setMinZoomPreference(10f);
+        mMap.setMinZoomPreference(11f);
         //mMap.setMaxZoomPreference(30f);
-        mMap.addMarker(location);
+        location.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+       // mMap.addMarker(location);
         mMap.addMarker(destination);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        mMap.setMyLocationEnabled(true);
     }
 
     @Override
