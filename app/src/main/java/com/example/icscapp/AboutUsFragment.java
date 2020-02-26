@@ -1,4 +1,4 @@
-package com.example.icscapp.ui.About_us;
+package com.example.icscapp;
 
 import android.Manifest;
 import android.content.Intent;
@@ -25,15 +25,13 @@ import java.util.Objects;
 
 public class AboutUsFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
 
     private TextView aboutPhone, aboutEmail;
     private Button callBtn, emailBtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_about_us, container, false);
 
         aboutEmail = root.findViewById(R.id.aboutEmail);
