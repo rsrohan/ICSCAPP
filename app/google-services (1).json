@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "65391527004",
+    "firebase_url": "https://icsc-app-b1ddb.firebaseio.com",
+    "project_id": "icsc-app-b1ddb",
+    "storage_bucket": "icsc-app-b1ddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65391527004:android:e0c9c055eaf54ebbca5299",
+        "android_client_info": {
+          "package_name": "com.example.icscapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65391527004-quir1urbp2t5d6qjisv60lm0a7rrlddg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.icscapp",
+            "certificate_hash": "e4ff16046f24b2619d29c1cd3f02bfc1f59bc096"
+          }
+        },
+        {
+          "client_id": "65391527004-5uchmuggljqhjgupjta3i2a5eca2h2r8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-rtqZN4vYC8CE-_sbXsQDFRy0S4723k8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65391527004-5uchmuggljqhjgupjta3i2a5eca2h2r8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

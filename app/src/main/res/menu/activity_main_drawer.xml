@@ -33,9 +33,9 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="About Us" />
     </group>
 
     <item android:title="Communicate">
@@ -45,7 +45,7 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/menu_share" />
             <item
-                android:id="@+id/navigate"
+                android:id="@+id/nav_navigate"
                 android:icon="@drawable/ic_place_black_24dp"
                 android:title="@string/menu_navigate"/>
             <item
