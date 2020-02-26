@@ -60,68 +60,79 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (!phoneNumber.getText().toString().equals("") && !paperId.getText().toString().equals("")) {
-                    DatePickerDialog datePickerDialog = new DatePickerDialog(activity);
-                    datePickerDialog.setOnDateSetListener(new DatePickerDialog.OnDateSetListener() {
-                        @Override
-                        public void onDateSet(DatePicker view, final int year, final int month, final int dayOfMonth) {
-
-                            try {
-                                if (!phoneNumber.getText().toString().equals("") && !paperId.getText().toString().equals("")) {
-                                    databaseReference.child("" + paperId.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                            try {
-                                                if (dataSnapshot.getValue(String.class).trim().equals(dayOfMonth + "/" + (month + 1) + "/" + year)) {
+                    try {
+                        if (!phoneNumber.getText().toString().equals("") && !paperId.getText().toString().equals("")) {
+                            databaseReference.child("" + paperId.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    try {
+                                        if (dataSnapshot.getValue(String.class).trim().equals(phoneNumber.getText().toString().trim())) {
 //                                                startActivity(new Intent(activity, MainActivity.class));
 //                                                finish();
-                                                    if (Pattern.compile(regEx).matcher(phoneNumber.getText().toString()).matches()) {
-                                                        final OTPDialog otpDialog = new OTPDialog(LoginActivity.this, phoneNumber.getText().toString(), activity);
-                                                        otpDialog.setCancelable(false);
-                                                        otpDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                                                            @Override
-                                                            public void onDismiss(DialogInterface dialog) {
+                                            if (Pattern.compile(regEx).matcher(phoneNumber.getText().toString()).matches()) {
+                                                final OTPDialog otpDialog = new OTPDialog(LoginActivity.this, phoneNumber.getText().toString(), activity);
+                                                otpDialog.setCancelable(false);
+                                                otpDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                                                    @Override
+                                                    public void onDismiss(DialogInterface dialog) {
 
-                                                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                                                                finish();
-                                                            }
-                                                        });
-                                                        otpDialog.show();
-
-                                                    } else {
-                                                        Toast.makeText(LoginActivity.this, "ARE YOU SURE THIS NUMBER IS VALID ?", Toast.LENGTH_SHORT).show();
+                                                        //startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                                        if (getIntent().getStringExtra("startNewAct")==null)
+                                                        {
+                                                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                                            finish();
+                                                        }else{
+                                                            finish();
+                                                        }
                                                     }
-                                                } else {
-                                                    Toast.makeText(activity, "INCORRECT DOB.", Toast.LENGTH_SHORT).show();
+                                                });
+                                                otpDialog.show();
 
-                                                }
-                                            } catch (Exception e) {
-                                                Toast.makeText(activity, "PAPER ID MAY NOT EXIST. PLEASE VERIFY", Toast.LENGTH_SHORT).show();
-                                                Log.d(TAG, "onDataChange: " + e);
+                                            } else {
+                                                Toast.makeText(LoginActivity.this, "ARE YOU SURE THIS NUMBER IS VALID ?", Toast.LENGTH_SHORT).show();
                                             }
+                                        } else {
+                                            Toast.makeText(activity, "INCORRECT PHONE NUMBER.", Toast.LENGTH_SHORT).show();
 
                                         }
+                                    } catch (Exception e) {
+                                        Toast.makeText(activity, "PAPER ID MAY NOT EXIST. PLEASE VERIFY", Toast.LENGTH_SHORT).show();
+                                        Log.d(TAG, "onDataChange: " + e);
+                                    }
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                        }
-                                    });
-                                } else {
-                                    Toast.makeText(activity, "FILL ALL DETAILS", Toast.LENGTH_SHORT).show();
                                 }
 
-                            } catch (Exception e) {
-                                Toast.makeText(activity, "paperId not found. " + e, Toast.LENGTH_SHORT).show();
-                                Log.d(TAG, "onDateSet: " + e);
-                            }
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                                }
+                            });
+                        } else {
+                            Toast.makeText(activity, "FILL ALL DETAILS", Toast.LENGTH_SHORT).show();
                         }
-                    });
-                    datePickerDialog.show();
-                    Toast.makeText(activity, "ENTER YOUR DATE OF BIRTH", Toast.LENGTH_LONG).show();
+
+                    } catch (Exception e) {
+                        Toast.makeText(activity, "paperId not found. " + e, Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "onDateSet: " + e);
+                    }
+//                    DatePickerDialog datePickerDialog = new DatePickerDialog(activity);
+//                    datePickerDialog.setOnDateSetListener(new DatePickerDialog.OnDateSetListener() {
+//                        @Override
+//                        public void onDateSet(DatePicker view, final int year, final int month, final int dayOfMonth) {
+//
+//
+//
+//                        }
+//                    });
+//                    datePickerDialog.show();
+//                    Toast.makeText(activity, "ENTER YOUR DATE OF BIRTH", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
 }

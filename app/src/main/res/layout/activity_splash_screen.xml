@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context=".SplashScreenActivity">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="76dp"
+        android:layout_gravity="end"
+        android:layout_margin="12dp"
+        android:src="@drawable/ieeelogo"/>
+
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/jiitlogo"
+        android:id="@+id/logo"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="4dp"
+        android:src="@drawable/jaypee_logo_full"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#7b0303"
+        android:id="@+id/title"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/nav_header_subtitle" />
+
+</LinearLayout>

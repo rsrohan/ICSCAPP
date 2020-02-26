@@ -4,17 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.viewpager.widget.ViewPager;
-
-import com.example.icscapp.ImageAdapter;
-import com.example.icscapp.R;
 
 public class GalleryFragment extends Fragment {
 
@@ -25,9 +17,9 @@ public class GalleryFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
-        ViewPager vp= root.findViewById(R.id.imageSlider);
-        ImageAdapter adapter = new ImageAdapter(getActivity());
-        vp.setAdapter(adapter);
+//        ViewPager vp= root.findViewById(R.id.imageSlider);
+//        ImageAdapter adapter = new ImageAdapter(getActivity());
+//        vp.setAdapter(adapter);
 
         return root;
     }

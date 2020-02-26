@@ -1,7 +1,6 @@
 package com.example.icscapp;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,15 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.DataSource;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,7 +30,6 @@ import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class HomeFragment extends Fragment {
 
@@ -98,13 +89,12 @@ public class HomeFragment extends Fragment {
         adapter = new SliderAdapterExample(getContext());
         renewItems(storageReference);
         sliderView.setSliderAdapter(adapter);
-
         sliderView.setIndicatorAnimation(IndicatorAnimations.SLIDE); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
         sliderView.setIndicatorSelectedColor(Color.WHITE);
         sliderView.setIndicatorUnselectedColor(Color.GRAY);
-        sliderView.setScrollTimeInSec(3);
+        sliderView.setScrollTimeInSec(5);
         sliderView.setAutoCycle(true);
         sliderView.startAutoCycle();
 
@@ -116,7 +106,7 @@ public class HomeFragment extends Fragment {
         final List<SliderItem> sliderItemList = new ArrayList<>();
 
         try {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 1; i < 10; i++) {
 
                 storageReference.child(i + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
@@ -128,12 +118,6 @@ public class HomeFragment extends Fragment {
                         sliderItemList.add(sliderItem);
                         Log.d(TAG, "onSuccess: " + uri.toString());
                         adapter.renewItems(sliderItemList);
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d(TAG, "onFailure: " + e);
-
                     }
                 });
                 //Log.d(TAG, "renewItems: "+storageReference.child(""+i+".jpg").getDownloadUrl().toString());

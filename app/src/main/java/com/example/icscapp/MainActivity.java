@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             calledAlready = true;
         }        user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user==null)
-        {
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
-        }
+//        if (user==null)
+//        {
+//            startActivity(new Intent(this, LoginActivity.class));
+//            finish();
+//        }
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        FloatingActionButton fab = findViewById(R.id.fab);

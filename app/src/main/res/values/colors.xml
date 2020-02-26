@@ -9,4 +9,6 @@
     <color name="c4">#008577</color>
     <color name="c5">#00574B</color>
     <color name="c6">#D81B60</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

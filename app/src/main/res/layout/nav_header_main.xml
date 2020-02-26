@@ -27,7 +27,7 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:textSize="12sp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="#7b0303"
         android:textStyle="bold"
         android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

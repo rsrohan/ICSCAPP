@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">ICSC APP</string>
+    <string name="app_name">ICSC 2020</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
-    <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida (INDIA)</string>
+    <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida, INDIA</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -48,5 +48,9 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="communicate">Communicate</string>
     <string name="call">call</string>
     <string name="about_jiit_">About JIIT</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

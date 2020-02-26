@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
@@ -63,23 +64,25 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
                     storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
-                            Glide.with(context).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
-                                @Override
-                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                                    Log.d("TAG", "onLoadFailed: "+e);
-                                    return false;
-                                }
-
-                                @Override
-                                public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-
-                                    try{
-                                        holder.image.setImageBitmap(resource);
-                                    }catch (Exception e){}
-                                    Log.d("TAG", "onResourceReady: "+resource);
-                                    return false;
-                                }
-                            }).submit();
+//                            Glide.with(context).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
+//                                @Override
+//                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
+//                                    Log.d("TAG", "onLoadFailed: "+e);
+//                                    return false;
+//                                }
+//
+//                                @Override
+//                                public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
+//
+//                                    try{
+//                                        holder.image.setImageBitmap(resource);
+//                                    }catch (Exception e){}
+//                                    Log.d("TAG", "onResourceReady: "+resource);
+//                                    return false;
+//                                }
+//                            }).submit();
+                            Glide.with(context).load(uri).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(holder.image);
+                            //holder.image.setImageURI(uri);
                         }
                     });
 

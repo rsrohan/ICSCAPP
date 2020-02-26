@@ -1,6 +1,7 @@
 package com.example.icscapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class PaperStatusFragment extends Fragment {
@@ -23,6 +26,7 @@ public class PaperStatusFragment extends Fragment {
 
 
 
+    FirebaseUser user;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,10 @@ public class PaperStatusFragment extends Fragment {
         // Inflate the layout for this fragment
         View v =inflater.inflate(R.layout.fragment_paper_status, container, false);
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user == null) {
+            startActivity(new Intent(getContext(), LoginActivity.class).putExtra("startNewAct", "false"));
+        }
 
 
         return v;
