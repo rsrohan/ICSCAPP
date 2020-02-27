@@ -28,9 +28,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:layout_gravity="center_vertical|end"
-                android:justificationMode="inter_word"
+
                 android:textStyle="bold"
                 android:id="@+id/paperName"
                 android:padding="2dp"
@@ -50,7 +48,8 @@
                     android:text="something"
                     android:id="@+id/otherInfo"
                     android:textColor="#000000"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="6dp"
+                    android:padding="2dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
