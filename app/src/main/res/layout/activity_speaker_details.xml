@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SpeakerDetails">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        app:cardElevation="3dp"
+        >
+
+
+            <ImageView
+                android:layout_width="180sp"
+                android:layout_height="160sp"
+                android:id="@+id/speakerimg"
+                android:src="@drawable/jiitlogo"
+                android:layout_gravity="center_horizontal"
+                android:padding="8sp"
+                />
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/speakerName"
+        android:layout_gravity="center_vertical"
+        android:hint="Speaker namme"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:padding="8sp"
+        android:layout_marginTop="10sp"
+        android:layout_margin="5sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/speakerCountry"
+        android:textColor="#000000"
+        android:layout_margin="5dp"
+        android:padding="8sp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="4dp"
+        android:backgroundTint="#eeeeee"
+        android:fadingEdgeLength="@dimen/appbar_padding"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8sp"
+            android:layout_margin="4dp"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/speakerInfo"
+                android:justificationMode="inter_word"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_margin="4dp"/>
+        </ScrollView>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

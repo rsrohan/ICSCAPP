@@ -16,13 +16,17 @@
         android:roundIcon="@drawable/jiitlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PastDetails"></activity>
+        <activity android:name=".SpeakerDetails" />
         <activity android:name=".SplashScreenActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".MessagingService"
             android:exported="false">

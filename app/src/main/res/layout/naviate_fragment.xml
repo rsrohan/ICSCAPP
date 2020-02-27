@@ -114,6 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:textColor="@android:color/white"
         android:text="navigate to Conference venue"
         android:background="@drawable/buttons_colorprimary_bg"
         android:id="@+id/navigatebtn"/>

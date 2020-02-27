@@ -36,6 +36,8 @@ public class GalleryFragment extends Fragment {
         firebaseStorage = FirebaseStorage.getInstance().getReference("gallery");
 
 
+
+
         return root;
     }
 }

@@ -3,8 +3,11 @@ package com.example.icscapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +35,7 @@ import java.util.ArrayList;
 
 public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAdapterForSpeakers.MyHolder> {
     Context context;
+    Uri uriImage;
     ArrayList<Speakers> speakersArrayList;
     StorageReference storageReference;
 
@@ -81,6 +85,7 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
 //                                    return false;
 //                                }
 //                            }).submit();
+                            speakers.setImage(uri.toString());
                             Glide.with(context).load(uri).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(holder.image);
                             //holder.image.setImageURI(uri);
                         }
@@ -107,6 +112,20 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
     private void showDetailsofSpeaker(Speakers speakers) {
 
       // showAlert(speakers.getAbout());
+        String name = speakers.name;
+        String image = speakers.image;
+        String about = speakers.about;
+        String from = speakers.from;
+
+        Intent intent = new Intent(context, SpeakerDetails.class);
+        //Bundle bundle = new Bundle()
+        intent.putExtra("NAME", name );
+        intent.putExtra("IMAGE", speakers.getImage());
+        intent.putExtra("ABOUT", about);
+        intent.putExtra("FROM", from);
+        context.startActivity(intent);
+
+
     }
 
     @Override
