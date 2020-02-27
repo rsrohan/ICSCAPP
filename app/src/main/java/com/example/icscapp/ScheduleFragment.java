@@ -23,6 +23,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import static androidx.constraintlayout.widget.Constraints.TAG;
+
 
 public class ScheduleFragment extends Fragment {
 
@@ -49,7 +51,7 @@ public class ScheduleFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_schedule, container, false);
-        databaseReference = FirebaseDatabase.getInstance().getReference("SCHEDULES");
+        databaseReference = FirebaseDatabase.getInstance().getReference("SCHEDULES").child("0");
         databaseReference.keepSynced(true);
         recyclerView = v.findViewById(R.id.recyclerViewForSchedules);
         recyclerView.setHasFixedSize(true);
@@ -64,6 +66,7 @@ public class ScheduleFragment extends Fragment {
                 ArrayList<Schedules> schedulesArrayList = new ArrayList<>();
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
 
+                    Log.d(TAG, "onDataChange: "+dataSnapshot1.getValue());
                     Schedules s = dataSnapshot1.getValue(Schedules.class);
                     schedulesArrayList.add(s);
                 }
