@@ -90,6 +90,15 @@ public class SpeakersFragment extends Fragment {
     }
 
 
+    public void recyclerClick(){
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    }
+
 
 
 

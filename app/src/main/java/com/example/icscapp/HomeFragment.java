@@ -55,6 +55,8 @@ public class HomeFragment extends Fragment {
         //firebaseDatabase.setPersistenceEnabled(true);
         databaseReference = firebaseDatabase.getReference("ICSC2020");
         databaseReference.keepSynced(true);
+
+
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
