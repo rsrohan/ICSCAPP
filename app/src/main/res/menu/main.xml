@@ -6,5 +6,6 @@
         android:orderInCategory="100"
         android:icon="@drawable/ic_exit_to_app_black_24dp"
         android:title="@string/logout"
+        android:visible="false"
         app:showAsAction="always" />
 </menu>

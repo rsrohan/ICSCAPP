@@ -40,9 +40,9 @@ public class PaperStatusFragment extends Fragment {
         View v =inflater.inflate(R.layout.fragment_paper_status, container, false);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user == null) {
-            startActivity(new Intent(getContext(), LoginActivity.class).putExtra("startNewAct", "false"));
-        }
+//        if (user == null) {
+//            startActivity(new Intent(getContext(), LoginActivity.class).putExtra("startNewAct", "false"));
+//        }
 
 
         return v;

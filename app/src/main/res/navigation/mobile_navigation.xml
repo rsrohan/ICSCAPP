@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.icscapp.ui.slideshow.SlideshowFragment"
+        android:name="com.example.icscapp.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 

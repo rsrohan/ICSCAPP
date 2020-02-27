@@ -62,9 +62,9 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
     public static void setAlphaAnimation(View v) {
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(v, "alpha",  1f, .1f);
-        fadeOut.setDuration(2000);
+        fadeOut.setDuration(0);
         ObjectAnimator fadeIn = ObjectAnimator.ofFloat(v, "alpha", .1f, 1f);
-        fadeIn.setDuration(1000);
+        fadeIn.setDuration(4000);
 
         final AnimatorSet mAnimationSet = new AnimatorSet();
 

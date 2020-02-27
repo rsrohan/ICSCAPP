@@ -19,7 +19,7 @@
             android:layout_width="124dp"
             android:layout_height="124dp"
             android:layout_margin="5dp"
-            android:scaleType="fitXY"
+            android:scaleType="centerInside"
             android:src="@drawable/jiitlogo"
             android:layout_gravity="center_horizontal"/>
 
