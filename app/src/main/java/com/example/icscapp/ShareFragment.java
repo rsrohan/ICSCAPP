@@ -36,7 +36,7 @@ public class ShareFragment extends Fragment {
 
     private ImageView qr;
     FirebaseStorage firebaseStorage;
-    StorageReference store;
+    StorageReference store,ref;
     Context context;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -46,28 +46,28 @@ public class ShareFragment extends Fragment {
 
         qr = root.findViewById(R.id.qrcode);
 
-        store = firebaseStorage.getInstance().getReference("qrcodes").child("frame.png");
-        //ref = store.child("frame.png");
+        store = firebaseStorage.getInstance().getReference("qrcodes");
+        ref = store.child("frame.png");
 
 
 
 
         try{
-            store.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) {
                     Glide.with(getActivity().getApplicationContext()).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
                         @Override
                         public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                           // Log.d("TAG", "onLoadFailed: "+e);
+                           Log.d("TAG", "onLoadFailed: "+e);
                             return false;
                         }
 
                         @Override
                         public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-                            //qr.setImageBitmap(resource);
+                            qr.setImageBitmap(resource);
                             Glide.with(getActivity().getApplicationContext()).load(resource).into(qr);
-                           // Log.d("TAG", "onResourceReady: "+resource);
+                            Log.d("TAG", "onResourceReady: "+resource);
                             return false;
                         }
                     }).submit();
