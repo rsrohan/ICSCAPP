@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:background="#80e5e4e2"
@@ -22,11 +23,21 @@
                 android:padding="2dp">
 
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/jiitlogo"
-                    android:layout_weight="2"/>
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/jiitlogo" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/icsc_2020"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:textStyle="bold" />
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
@@ -54,23 +65,14 @@
                 android:textColor="#000000"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:text="@string/nav_header_subtitle" />
+                android:text="@string/nav_header_subtitle2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="3">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="@string/icsc_2020"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:gravity="center"
-                    android:layout_weight="3"
-                    android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="30dp"
@@ -149,12 +151,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
+                android:textSize="14sp"
                 android:textStyle="bold|italic"
                 android:layout_gravity="center_vertical|end"
                 android:padding="8dp"
                 android:justificationMode="inter_word"
                 android:textColor="#000000"
                  />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="@string/organisedby"
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="ECE Department\nJaypee Institute of Information Technology, Noida (INDIA)"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -174,6 +195,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
+                android:textColor="@android:color/black"
+
                 android:padding="4dp"
                 android:text="IEEE Signal Processing Society,\nUP Section Chapter"/>
             <TextView
@@ -193,6 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
+                android:textColor="@android:color/black"
                 android:padding="4dp"
                 android:text="Science and Engineering Research Board Department of Science and Technology, Government of India"/>
 

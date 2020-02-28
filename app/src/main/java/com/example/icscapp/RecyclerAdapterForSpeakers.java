@@ -107,6 +107,19 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
                 showDetailsofSpeaker(speakers);
             }
         });
+        holder.from.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDetailsofSpeaker(speakers);
+            }
+        });
+        holder.name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDetailsofSpeaker(speakers);
+            }
+        });
+
     }
 
     private void showDetailsofSpeaker(Speakers speakers) {
