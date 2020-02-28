@@ -52,15 +52,14 @@ public class SplashScreenActivity extends AppCompatActivity {
 //            }
 //        }, 1500);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                finish();
-            }
-        }, 4000);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//            }
+//        }, 4000);
     }
-    public static void setAlphaAnimation(View v) {
+    public void setAlphaAnimation(View v) {
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(v, "alpha",  1f, .1f);
         fadeOut.setDuration(0);
         ObjectAnimator fadeIn = ObjectAnimator.ofFloat(v, "alpha", .1f, 1f);
@@ -74,7 +73,8 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                mAnimationSet.start();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
             }
         });
         mAnimationSet.start();

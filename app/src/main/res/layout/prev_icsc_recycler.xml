@@ -3,9 +3,28 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        app:cardCornerRadius="4dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:id="@+id/year"
+            />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -17,35 +36,50 @@
         <ImageView
             android:layout_width="match_parent"
             android:id="@+id/imagehistory"
-            android:layout_height="match_parent"
+            android:layout_height="224dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
 
             />
 
-        <LinearLayout
+
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearlayout"
+        android:background="#00ffffff"
+        android:orientation="vertical">
+
+
+
+
+
+
+
+
+
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/linearlayout"
-            android:background="#55ffffff"
-            android:orientation="vertical">
-
-
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            >
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp">
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:cardCornerRadius="12dp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="18sp"
-                    android:background="@color/colorPrimary"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white"
-                    android:id="@+id/year"
+                    android:id="@+id/infoHistory"
+                    android:textSize="14sp"
+                    android:layout_margin="5sp"
+                    android:textColor="@android:color/black"
+                    android:justificationMode="inter_word"
+                    android:padding="8sp"
                     />
             </androidx.cardview.widget.CardView>
 
@@ -53,54 +87,25 @@
 
 
 
+        </ScrollView>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Know More"
-                android:id="@+id/know_more"
-                android:textColor="@android:color/white"
-                android:background="@drawable/buttons_colorprimary_bg"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:padding="8dp"
-                />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5sp"
-                >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    app:cardCornerRadius="12dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/infoHistory"
-                        android:textSize="14sp"
-                        android:layout_margin="5sp"
-                        android:textColor="@android:color/black"
-                        android:justificationMode="inter_word"
-                        android:padding="8sp"
-                        />
-                </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Know More"
+            android:id="@+id/know_more"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/buttons_colorprimary_bg"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:layout_marginBottom="12dp"
+            />
 
 
 
-
-
-            </ScrollView>
-
-
-
-
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 
 

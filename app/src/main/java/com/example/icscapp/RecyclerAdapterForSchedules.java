@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,6 +57,20 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
         holder.papername.setText(schedules.getPapername());
         holder.timing.setText(schedules.getTiming());
         holder.otherinfo.setText(schedules.getOtherinfo());
+        if (!holder.otherinfo.toString().contains("Venue") || !holder.otherinfo.toString().contains(" "))
+        {
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.buttons_colorprimary_bg));
+        }
+        if (schedules.getPapername().trim().toLowerCase().equals("tea break")||schedules.getPapername().trim().toLowerCase().equals("lunch"))
+        {
+            //holder.papername.setTextColor(Color.parseColor("#000000"));
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.bg4));
+        }
+        if (schedules.getOtherinfo().trim().length()>12)
+        {
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.sidenavbar));
+
+        }
 
     }
 
@@ -66,6 +83,7 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
     public class MyHolder extends RecyclerView.ViewHolder {
 
         TextView paperid, papername, timing, otherinfo;
+        LinearLayout linearLayout;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
@@ -73,6 +91,7 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
             papername = itemView.findViewById(R.id.paperName);
             timing = itemView.findViewById(R.id.timing);
             otherinfo = itemView.findViewById(R.id.otherInfo);
+            linearLayout = itemView.findViewById(R.id.linearlayout);
         }
     }
 

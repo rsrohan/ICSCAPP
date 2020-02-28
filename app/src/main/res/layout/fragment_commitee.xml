@@ -3,23 +3,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Commitee">
+    android:background="#80e5e4e2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CommiteeFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv1"
-            android:layout_margin="5dp"
-            android:text="advisory"
-            android:drawableRight="@color/cardview_dark_background">
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/advisory"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Advisory Committee"
+                    android:textStyle="bold"
+                    android:drawablePadding="16dp"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:layout_margin="5dp"
+                    />
+            </androidx.cardview.widget.CardView>
 
-        </TextView>
 
-    </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rec_advisory"
+                android:visibility="gone"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/technical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Technical Program Committee"
+                    android:textStyle="bold"
+                    android:drawablePadding="16dp"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:layout_margin="5dp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rec_tech"
+                android:visibility="gone"
+
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/organising"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Organising Committee"
+                    android:textStyle="bold"
+                    android:drawablePadding="16dp"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:layout_margin="5dp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rec_organising"
+                android:visibility="gone"
+
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 
 

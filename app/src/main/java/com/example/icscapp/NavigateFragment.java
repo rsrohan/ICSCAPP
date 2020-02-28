@@ -46,7 +46,7 @@ public class NavigateFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent callbtn = new Intent(Intent.ACTION_DIAL);
-                String number = "7388263171";
+                String number = "1911202400973";
 
                 callbtn.setData(Uri.parse("tel:" + number));
 

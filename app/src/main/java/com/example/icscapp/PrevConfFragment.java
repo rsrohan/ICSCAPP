@@ -65,7 +65,7 @@ public class PrevConfFragment extends Fragment {
         rv = v.findViewById(R.id.recycler1);
         rv.setHasFixedSize(true);
 
-        mlayoutManager =new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
+        mlayoutManager =new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false);
 
         //madapter = new ItemAdapter(history, getContext());
         rv.setLayoutManager(mlayoutManager);

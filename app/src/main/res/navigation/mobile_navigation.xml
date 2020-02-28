@@ -43,6 +43,12 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/nav_committee"
+        android:name="com.example.icscapp.CommiteeFragment"
+        android:label="Committee"
+        tools:layout="@layout/fragment_commitee"/>
+
+    <fragment
         android:id="@+id/about_us"
         android:name="com.example.icscapp.AboutUsFragment"
         android:label="About Us"
