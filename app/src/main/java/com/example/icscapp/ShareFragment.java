@@ -56,21 +56,22 @@ public class ShareFragment extends Fragment {
             ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) {
-                    Glide.with(getActivity().getApplicationContext()).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
-                        @Override
-                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                           Log.d("TAG", "onLoadFailed: "+e);
-                            return false;
-                        }
-
-                        @Override
-                        public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-                            qr.setImageBitmap(resource);
-                            Glide.with(getActivity().getApplicationContext()).load(resource).into(qr);
-                            Log.d("TAG", "onResourceReady: "+resource);
-                            return false;
-                        }
-                    }).submit();
+//                    Glide.with(getActivity().getApplicationContext()).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
+//                        @Override
+//                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
+//                           Log.d("TAG", "onLoadFailed: "+e);
+//                            return false;
+//                        }
+//
+//                        @Override
+//                        public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
+//                            qr.setImageBitmap(resource);
+//                            Glide.with(getActivity().getApplicationContext()).load(resource).into(qr);
+//                            Log.d("TAG", "onResourceReady: "+resource);
+//                            return false;
+//                        }
+//                    }).submit();
+                    Glide.with(getActivity().getApplicationContext()).load(uri).into(qr);
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override

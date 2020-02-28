@@ -1,25 +1,25 @@
 package com.example.icscapp;
 
 public class adapterPrev {
-    Long year;
+    String year;
     String info;
-    String img;
+    String image;
 
     public  adapterPrev(){
 
     }
 
-   public adapterPrev(Long year, String info, String img){
+   public adapterPrev(String year, String info, String image){
         this.year = year;
         this.info = info;
-        this.img = img;
+        this.image = image;
     }
 
-    public Long getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(Long year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -31,11 +31,11 @@ public class adapterPrev {
         this.info = info;
     }
 
-    public String getImg() {
-        return img;
+    public String getimage() {
+        return image;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setimage(String image) {
+        this.image = image;
     }
 }

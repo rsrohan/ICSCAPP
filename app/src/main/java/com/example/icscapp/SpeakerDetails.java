@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -22,6 +25,7 @@ public class SpeakerDetails extends AppCompatActivity {
 
 
         Bundle bundle = getIntent().getExtras();
+        assert bundle != null;
         name = bundle.getString("NAME");
         image = bundle.getString("IMAGE");
         about = bundle.getString("ABOUT");
@@ -36,7 +40,8 @@ public class SpeakerDetails extends AppCompatActivity {
         speakerName.setText(name);
         speakerAbout.setText(about);
         speakerFrom.setText(from);
-        //speakerImg.setImageBitmap();
+        Glide.with(getApplicationContext()).load(Uri.parse(image)).into(speakerImg);
+        //speakerImg.setImageURI(Uri.parse(image));
 
 
     }

@@ -39,26 +39,38 @@
         android:layout_marginBottom="8dp"
         />
 
-    <EditText
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/phoneNumber"
-        android:hint="Phone Number (10 digits)"
-        android:inputType="phone"
-        android:background="@drawable/buttons_colorprimary_bg"
-        android:padding="12dp"
-        android:layout_margin="4dp"/>
+        app:cardCornerRadius="16dp"
+        android:padding="16dp"
+        android:layout_margin="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneNumber"
+                android:hint="Phone Number (10 digits)"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:layout_margin="4dp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/paperId"
-        android:hint="Paper ID "
-        android:inputType="text"
-        android:background="@drawable/buttons_colorprimary_bg"
-        android:padding="12dp"
-        android:layout_margin="4dp"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/paperId"
+                android:hint="Paper ID "
+                android:inputType="text"
+                android:padding="12dp"
+                android:layout_margin="4dp"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 <!--    <Button-->
 <!--        android:layout_width="wrap_content"-->

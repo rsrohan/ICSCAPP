@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -8,61 +9,87 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:fadingEdgeLength="5sp"
         android:layout_margin="10dp"
         app:cardCornerRadius="20dp">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/imagehistory"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearlayout"
+            android:background="#55ffffff"
             android:orientation="vertical">
 
-            <TextView
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="year2020"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="5sp"
-                android:id="@+id/year"
-                android:padding="8dp"
-                />
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/year"
+                    />
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:id="@+id/imagehistory"
-                android:layout_height="200sp"
-                android:src="@drawable/jiitlogo"
 
-                />
+
+
 
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Know More"
                 android:id="@+id/know_more"
-                android:textSize="18dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/buttons_colorprimary_bg"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="5sp"
-                android:padding="8sp"
+                android:layout_margin="8dp"
+                android:padding="8dp"
                 />
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5sp"
-                android:padding="8sp">
-
-
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    app:cardCornerRadius="12dp">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/infoHistory"
                         android:textSize="14sp"
                         android:layout_margin="5sp"
+                        android:textColor="@android:color/black"
+                        android:justificationMode="inter_word"
                         android:padding="8sp"
                         />
+                </androidx.cardview.widget.CardView>
+
+
+
 
 
             </ScrollView>

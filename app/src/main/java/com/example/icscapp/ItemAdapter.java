@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -25,21 +26,23 @@ import java.util.ArrayList;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder> {
 
-StorageReference storageReference;
-Activity activity;
+    StorageReference storageReference;
+    Activity activity;
     ArrayList<adapterPrev> Arraylist;
-Context context;
-public static int c = 1;
+    Context context;
+    public static int c = 1;
+    private String TAG = "tag";
 
-public ItemAdapter(ArrayList<adapterPrev> arraylist, Context context, Activity activity){
-    this.context = context;
-    this.Arraylist = arraylist;
-    this.activity = activity;
-}
+    public ItemAdapter(ArrayList<adapterPrev> arraylist, Context context, Activity activity) {
+        this.context = context;
+        this.Arraylist = arraylist;
+        this.activity = activity;
+    }
 
 
     private ArrayList<adapterPrev> mitemlist;
-    public  class ItemViewHolder extends RecyclerView.ViewHolder{
+
+    public class ItemViewHolder extends RecyclerView.ViewHolder {
 
         public TextView year, info;
         public ImageView image;
@@ -56,14 +59,20 @@ public ItemAdapter(ArrayList<adapterPrev> arraylist, Context context, Activity a
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    c=c*-1;
-                    if(c<0){
-                        info.setVisibility(itemView.VISIBLE);
-                    }
 
-                    if(c>0){
+                    if (info.getVisibility()==View.VISIBLE)
+                    {
                         info.setVisibility(itemView.GONE);
+                    }else{
+                        info.setVisibility(itemView.VISIBLE);
+
                     }
+//                    c = c * -1;
+//                    if (c < 0) {
+//                    }
+//
+//                    if (c > 0) {
+//                    }
 
                 }
             });
@@ -71,16 +80,17 @@ public ItemAdapter(ArrayList<adapterPrev> arraylist, Context context, Activity a
         }
     }
 
-    public ItemAdapter(ArrayList<adapterPrev> ItemList){
+    public ItemAdapter(ArrayList<adapterPrev> ItemList, Context c) {
 
         mitemlist = ItemList;
+        this.context = c;
 
     }
 
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.prev_icsc_recycler,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.prev_icsc_recycler, parent, false);
 
         //Button btn = v.findViewById(R.id.know_more);
         ItemViewHolder ivh = new ItemViewHolder(v);
@@ -92,47 +102,38 @@ public ItemAdapter(ArrayList<adapterPrev> arraylist, Context context, Activity a
     public void onBindViewHolder(@NonNull final ItemViewHolder holder, int position) {
         final adapterPrev currentItem = mitemlist.get(position);
 
-        holder.year.setText("Year: " + currentItem.getYear());
-        holder.info.setText( currentItem.getInfo());
+        holder.year.setText(currentItem.getYear());
+        holder.info.setText(currentItem.getInfo());
 
 
-   //     activity.runOnUiThread(new Runnable() {
-     ///       @Override
-         //   public void run() {
-                try{
-                    storageReference = FirebaseStorage.getInstance().getReference("prev_editions").child(currentItem.getImg());
-                    storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                        @Override
-                        public void onSuccess(Uri uri) {
-//                            Glide.with(context).asBitmap().load(uri).addListener(new RequestListener<Bitmap>() {
-//                                @Override
-//                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-//                                    Log.d("TAG", "onLoadFailed: "+e);
-//                                    return false;
-//                                }
-//
-//                                @Override
-//                                public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-//
-//                                    try{
-//                                        holder.image.setImageBitmap(resource);
-//                                    }catch (Exception e){}
-//                                    Log.d("TAG", "onResourceReady: "+resource);
-//                                    return false;
-//                                }
-//                            }).submit();
-                            Glide.with(context).load(uri).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(holder.image);
-                            //holder.image.setImageURI(uri);
-                        }
-                    });
+        //     activity.runOnUiThread(new Runnable() {
+        ///       @Override
+        //   public void run() {
+        Log.d(TAG, "onBindViewHolder: " + currentItem.getimage());
 
+        try {
+            storageReference = FirebaseStorage.getInstance().getReference("prev_editions").child(currentItem.getimage());
+            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    Log.d(TAG, "onSuccess: " + uri);
 
-                }catch (Exception e){
-                    Log.d("TAG", "onBindViewHolder: "+e);
+                    Glide.with(context.getApplicationContext()).load(uri).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(holder.image);
+                    //holder.image.setImageURI(uri);
                 }
-          //  }
-      //  });
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.d(TAG, "onFailure: " + e);
+                }
+            });
 
+
+        } catch (Exception e) {
+            Log.d("TAG", "onBindViewHolder: " + e);
+        }
+        //  }
+        //  });
 
 
     }

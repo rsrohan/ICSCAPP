@@ -30,7 +30,7 @@
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_person_add_black_24dp"
             android:title="@string/menu_slideshow" />
         <item
             android:id="@+id/about_us"

@@ -51,7 +51,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/speakerCountry"
-        android:textSize="18sp"
         android:textColor="#000000"
         android:layout_margin="5dp"
         android:padding="8sp"/>
@@ -61,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:layout_margin="10dp"
+        android:layout_margin="4dp"
         android:backgroundTint="#eeeeee"
         android:fadingEdgeLength="@dimen/appbar_padding"
         >
@@ -70,16 +69,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8sp"
-            android:layout_margin="5sp"
+            android:layout_margin="4dp"
+            android:layout_gravity="center"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/speakerInfo"
-                android:textSize="18sp"
-                android:layout_margin="5sp"
-                android:layout_marginTop="10sp"
-                android:padding="8sp"/>
+                android:justificationMode="inter_word"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_margin="4dp"/>
         </ScrollView>
 
 

@@ -35,6 +35,7 @@ import java.util.ArrayList;
 
 public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAdapterForSpeakers.MyHolder> {
     Context context;
+    Uri uriImage;
     ArrayList<Speakers> speakersArrayList;
     StorageReference storageReference;
 
@@ -84,6 +85,7 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
 //                                    return false;
 //                                }
 //                            }).submit();
+                            speakers.setImage(uri.toString());
                             Glide.with(context).load(uri).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(holder.image);
                             //holder.image.setImageURI(uri);
                         }
@@ -118,7 +120,7 @@ public class RecyclerAdapterForSpeakers extends RecyclerView.Adapter<RecyclerAda
         Intent intent = new Intent(context, SpeakerDetails.class);
         //Bundle bundle = new Bundle()
         intent.putExtra("NAME", name );
-        intent.putExtra("IMAGE", image);
+        intent.putExtra("IMAGE", speakers.getImage());
         intent.putExtra("ABOUT", about);
         intent.putExtra("FROM", from);
         context.startActivity(intent);

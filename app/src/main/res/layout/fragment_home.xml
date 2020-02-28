@@ -2,68 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="#80e5e4e2"
+
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="2dp">
-
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:src="@drawable/jiitlogo" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:layout_marginRight="4dp"
-            android:src="@drawable/jaypee_logo_full" />
-
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:padding="4dp"
-        android:id="@+id/slidingmessagetop"
-        android:gravity="center"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:textStyle="bold"
-        android:textColor="#7b0303"
-        android:text="\t\t6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION.\tMarch 5th-7th, 2020\tOrganized by ECE Department,\tJaypee Institute of Information Technology, Noida (INDIA)"/>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="4dp"
-        app:cardCornerRadius="16dp">
-
-        <com.smarteist.autoimageslider.SliderView
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorAnimationDuration="600"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
-            app:sliderIndicatorMargin="15dp"
-            app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
-            app:sliderIndicatorSelectedColor="#5A5A5A"
-            app:sliderIndicatorUnselectedColor="#FFF"
-            app:sliderScrollTimeInSec="1"
-            app:sliderStartAutoCycle="true" />
-    </androidx.cardview.widget.CardView>
-
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -76,6 +18,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/jiitlogo"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ieeelogo" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#7b0303"
+                android:textStyle="bold"
+                android:text="@string/nav_header_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/nav_header_subtitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:weightSum="3">
                 <TextView
                     android:layout_width="wrap_content"
@@ -84,25 +68,93 @@
                     android:text="@string/icsc_2020"
                     android:textColor="#000000"
                     android:textSize="20sp"
+                    android:gravity="center"
                     android:layout_weight="3"
                     android:textStyle="bold" />
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginRight="4dp"
+                    android:visibility="gone"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ieeelogo"/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/jiitlogo" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/jaypee_logo_full" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:id="@+id/slidingmessagetop"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:textStyle="bold"
+                android:textColor="#7b0303"
+                android:text="\t\t6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION.\tMarch 5th-7th, 2020\tOrganized by ECE Department,\tJaypee Institute of Information Technology, Noida (INDIA)"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="16dp">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+            </androidx.cardview.widget.CardView>
+
+
+
 
             <TextView
                 android:id="@+id/information"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
+                android:textStyle="bold|italic"
                 android:layout_gravity="center_vertical|end"
                 android:padding="8dp"
+                android:justificationMode="inter_word"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
