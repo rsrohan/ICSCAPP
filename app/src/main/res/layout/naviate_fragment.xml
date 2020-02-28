@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:textSize="18dp"
-                android:text="24x7 Helpline No. \n1-911-2042-00973"/>
+                android:text="@string/helpline"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
