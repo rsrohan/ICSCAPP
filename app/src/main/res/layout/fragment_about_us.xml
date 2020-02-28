@@ -122,10 +122,10 @@
 
                    <Button
                        android:id="@+id/aboutMailBtn"
-                       android:layout_width="44dp"
-                       android:layout_height="44dp"
+                       android:layout_width="24dp"
+                       android:layout_height="24dp"
                        android:layout_margin="8dp"
-                       android:background="@drawable/ic_mail_outline_black_24dp"/>
+                       android:background="@drawable/ic_public_black_24dp"/>
 
                    <TextView
                        android:id="@+id/aboutEmail"
@@ -134,8 +134,7 @@
                        android:clickable="true"
                        android:layout_gravity="center_vertical"
                        android:onClick="mailAuthority"
-                       android:textSize="18sp"
-                       android:text="@string/Email"
+                       android:text="www.jiit.ac.in/"
                        android:padding="8dp"
                        android:focusable="true" />
                </LinearLayout>

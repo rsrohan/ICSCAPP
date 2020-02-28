@@ -105,11 +105,11 @@ public class AboutUsFragment extends Fragment {
         aboutEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("plain/text");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "webadmin@jiit.ac.in" });
-                intent.putExtra(Intent.EXTRA_SUBJECT, "");
-                intent.putExtra(Intent.EXTRA_TEXT, "");
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.jiit.ac.in/"));
+                //intent.setType("plain/text");
+                //intent.putExtra(Intent.ACTION_WEB_SEARCH, new String[] { "" });
+                //intent.putExtra(Intent.EXTRA_SUBJECT, "");
+                //intent.putExtra(Intent.EXTRA_TEXT, "");
                 startActivity(Intent.createChooser(intent, ""));
 
             }
