@@ -67,7 +67,7 @@ public class PrevConfFragment extends Fragment {
 
         mlayoutManager =new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
 
-        madapter = new ItemAdapter(history);
+        //madapter = new ItemAdapter(history, getContext());
         rv.setLayoutManager(mlayoutManager);
         //rv.setAdapter(madapter);
 
@@ -80,12 +80,13 @@ public class PrevConfFragment extends Fragment {
                         ArrayList<adapterPrev> list = new ArrayList<>();
                         for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                         {
+                            Log.d("Tag", "onDataChange: "+dataSnapshot1.getValue());
+
                             adapterPrev s = dataSnapshot1.getValue(adapterPrev.class);
                             assert s != null;
-                            //Log.d("Tag", "onDataChange: "+s.getName());
                             list.add(s);
                         }
-                        ItemAdapter r= new ItemAdapter(list);
+                        ItemAdapter r= new ItemAdapter(list, getContext());
                         r.notifyDataSetChanged();
                         //progressBar.setVisibility(View.GONE);
                         rv.setAdapter(r);

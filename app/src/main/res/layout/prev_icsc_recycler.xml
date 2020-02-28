@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -13,27 +14,39 @@
         android:layout_margin="10dp"
         app:cardCornerRadius="20dp">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/imagehistory"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jiitlogo"
+
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/linearlayout"
+            android:background="#90ffffff"
             android:orientation="vertical">
+
+
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5sp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
                 android:id="@+id/year"
                 android:padding="8dp"
                 />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:id="@+id/imagehistory"
-                android:layout_height="200dp"
-                android:src="@drawable/jiitlogo"
-
-                />
 
 
             <Button
@@ -52,18 +65,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5sp"
-                android:padding="8sp">
-
-
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    app:cardCornerRadius="12dp">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/infoHistory"
                         android:textSize="14sp"
                         android:layout_margin="5sp"
+                        android:textColor="@android:color/black"
                         android:justificationMode="inter_word"
                         android:padding="8sp"
                         />
+                </androidx.cardview.widget.CardView>
+
+
+
 
 
             </ScrollView>
