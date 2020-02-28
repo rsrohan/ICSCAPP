@@ -71,9 +71,9 @@ public class ScheduleFragment extends Fragment {
 
 
         Adapter adapter = new Adapter(getChildFragmentManager());
-        adapter.addFragment( new ScheduleDataFragment(0),"Day 1");
-        adapter.addFragment(new ScheduleDataFragment(1), "Day 2");
-        adapter.addFragment(new ScheduleDataFragment(2), "Day 3");
+        adapter.addFragment( new ScheduleDataFragment(0),"Day 1\nMarch 5");
+        adapter.addFragment(new ScheduleDataFragment(1), "Day 2\nMarch 6");
+        adapter.addFragment(new ScheduleDataFragment(2), "Day 3\nMarch 7");
 
         viewPager.setAdapter(adapter);
 

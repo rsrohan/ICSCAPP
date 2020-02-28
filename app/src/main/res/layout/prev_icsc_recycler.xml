@@ -20,7 +20,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
-            android:src="@drawable/jiitlogo"
 
             />
 
@@ -28,24 +27,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/linearlayout"
-            android:background="#90ffffff"
+            android:background="#55ffffff"
             android:orientation="vertical">
 
 
-
-
-            <TextView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="5sp"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:id="@+id/year"
-                android:padding="8dp"
-                />
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/year"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
 
 
 

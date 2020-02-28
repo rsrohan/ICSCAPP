@@ -22,7 +22,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/recycler1"
                 android:orientation="horizontal"
-                android:padding="8dp"/>
+                />
 
            <!-- <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/imageSlider2"

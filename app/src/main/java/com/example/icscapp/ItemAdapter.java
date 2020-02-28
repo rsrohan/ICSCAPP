@@ -59,14 +59,20 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    c = c * -1;
-                    if (c < 0) {
-                        info.setVisibility(itemView.VISIBLE);
-                    }
 
-                    if (c > 0) {
+                    if (info.getVisibility()==View.VISIBLE)
+                    {
                         info.setVisibility(itemView.GONE);
+                    }else{
+                        info.setVisibility(itemView.VISIBLE);
+
                     }
+//                    c = c * -1;
+//                    if (c < 0) {
+//                    }
+//
+//                    if (c > 0) {
+//                    }
 
                 }
             });
