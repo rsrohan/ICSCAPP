@@ -43,6 +43,12 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/nav_committee"
+        android:name="com.example.icscapp.Commitee"
+        android:label="Committee"
+        tools:layout="@layout/fragment_commitee"/>
+
+    <fragment
         android:id="@+id/about_us"
         android:name="com.example.icscapp.AboutUsFragment"
         android:label="About Us"
@@ -63,4 +69,6 @@
         android:id="@+id/nav_send"
         android:name="com.example.icscapp.ContactUsFragment"
         android:label="@string/menu_send" />
+
+
 </navigation>
