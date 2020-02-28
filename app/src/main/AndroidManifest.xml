@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.icscapp">
+    package="com.jiit.icscapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -16,9 +16,9 @@
         android:roundIcon="@drawable/jiitlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PastDetails"></activity>
-        <activity android:name=".SpeakerDetails" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name="com.jiit.icscapp.PastDetails"></activity>
+        <activity android:name="com.jiit.icscapp.SpeakerDetails" />
+        <activity android:name="com.jiit.icscapp.SplashScreenActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
         </activity>
 
         <service
-            android:name=".MessagingService"
+            android:name="com.jiit.icscapp.MessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -38,9 +38,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".LoginActivity" />
+        <activity android:name="com.jiit.icscapp.LoginActivity" />
         <activity
-            android:name=".MapsActivity"
+            android:name="com.jiit.icscapp.MapsActivity"
             android:label="@string/title_activity_maps">
 
             <!--
@@ -52,7 +52,7 @@
             -->
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.jiit.icscapp.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 

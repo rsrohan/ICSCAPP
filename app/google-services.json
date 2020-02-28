@@ -50,6 +50,43 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65391527004:android:117ae0a2e2ccb66eca5299",
+        "android_client_info": {
+          "package_name": "com.jiit.icscapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65391527004-7kkd60l1np77d8thu1kbo8f49f06c9qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jiit.icscapp",
+            "certificate_hash": "e4ff16046f24b2619d29c1cd3f02bfc1f59bc096"
+          }
+        },
+        {
+          "client_id": "65391527004-5uchmuggljqhjgupjta3i2a5eca2h2r8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-rtqZN4vYC8CE-_sbXsQDFRy0S4723k8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65391527004-5uchmuggljqhjgupjta3i2a5eca2h2r8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

@@ -7,70 +7,70 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.icscapp.HomeFragment"
+        android:name="com.jiit.icscapp.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/schedules"
-        android:name="com.example.icscapp.ScheduleFragment"
+        android:name="com.jiit.icscapp.ScheduleFragment"
         android:label="@string/schedules"
         tools:layout="@layout/fragment_schedule" />
     <fragment
         android:id="@+id/speakers"
-        android:name="com.example.icscapp.SpeakersFragment"
+        android:name="com.jiit.icscapp.SpeakersFragment"
         android:label="@string/speakers"
         tools:layout="@layout/fragment_speakers" />
     <fragment
         android:id="@+id/paperStatus"
-        android:name="com.example.icscapp.PaperStatusFragment"
+        android:name="com.jiit.icscapp.PaperStatusFragment"
         android:label="@string/paperStatus"
         tools:layout="@layout/fragment_paper_status" />
     <fragment
         android:id="@+id/prevConf"
-        android:name="com.example.icscapp.PrevConfFragment"
+        android:name="com.jiit.icscapp.PrevConfFragment"
         android:label="@string/prevConf"
         tools:layout="@layout/fragment_prev_conf" />
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.icscapp.GalleryFragment"
+        android:name="com.jiit.icscapp.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.icscapp.SlideshowFragment"
+        android:name="com.jiit.icscapp.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_committee"
-        android:name="com.example.icscapp.CommiteeFragment"
+        android:name="com.jiit.icscapp.CommiteeFragment"
         android:label="Committee"
         tools:layout="@layout/fragment_commitee"/>
 
     <fragment
         android:id="@+id/about_us"
-        android:name="com.example.icscapp.AboutUsFragment"
+        android:name="com.jiit.icscapp.AboutUsFragment"
         android:label="About Us"
         tools:layout="@layout/fragment_about_us" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.icscapp.ShareFragment"
+        android:name="com.jiit.icscapp.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_navigate"
-        android:name="com.example.icscapp.NavigateFragment"
+        android:name="com.jiit.icscapp.NavigateFragment"
         android:label="@string/menu_navigate" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.icscapp.ContactUsFragment"
+        android:name="com.jiit.icscapp.ContactUsFragment"
         android:label="@string/menu_send" />
     <fragment
         android:id="@+id/nav_explore"
-        android:name="com.example.icscapp.ExploreNCRFragment"
+        android:name="com.jiit.icscapp.ExploreNCRFragment"
         android:label="@string/explorencr" />
 </navigation>
