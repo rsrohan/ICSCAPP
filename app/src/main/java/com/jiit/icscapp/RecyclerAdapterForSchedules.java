@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -45,16 +46,16 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
         holder.otherinfo.setText(schedules.getOtherinfo());
         if (!holder.otherinfo.toString().contains("Venue") || !holder.otherinfo.toString().contains(" "))
         {
-            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.buttons_colorprimary_bg));
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_333));
         }
         if (schedules.getPapername().trim().toLowerCase().equals("tea break")||schedules.getPapername().trim().toLowerCase().equals("lunch"))
         {
-            //holder.papername.setTextColor(Color.parseColor("#000000"));
-            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.bg4));
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img2_11));
+            //holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_free_breakfast_black_24dp));
         }
         if (schedules.getOtherinfo().trim().length()>12)
         {
-            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.sidenavbar));
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_111));
 
         }
 
@@ -71,6 +72,7 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
         TextView paperid, papername, timing, otherinfo;
         LinearLayout linearLayout;
 
+        ImageView imageView;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             paperid = itemView.findViewById(R.id.paperId);
@@ -78,6 +80,7 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
             timing = itemView.findViewById(R.id.timing);
             otherinfo = itemView.findViewById(R.id.otherInfo);
             linearLayout = itemView.findViewById(R.id.linearlayout);
+            imageView = itemView.findViewById(R.id.image);
         }
     }
 
