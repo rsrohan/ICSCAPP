@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida, INDIA</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="nav_header_subtitle2">March 5-7, 2020</string>
+    <string name="nav_header_subtitle2">March 5-7, 2020\nJaypee Institute of Information Technology, Noida(INDIA)</string>
     <string name="nav_header_title2">2020 6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
 
     <string name="menu_home">Home</string>
@@ -57,5 +57,6 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="explorencr">Explore NCR</string>
     <string name="organisedby">Organised by:</string>
+    <string name="nav_header_subtitle3">March 5-7, 2020</string>
 
 </resources>

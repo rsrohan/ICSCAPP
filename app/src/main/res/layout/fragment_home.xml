@@ -70,8 +70,8 @@
                 android:textColor="#000000"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textSize="16sp"
-                android:text="@string/nav_header_subtitle2" />
+                android:textSize="12sp"
+                android:text="@string/nav_header_subtitle3" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -214,7 +214,7 @@
                         android:layout_gravity="start"
                         android:gravity="left"
                         android:textColor="@android:color/black"
-                        android:padding="4dp"
+                        android:padding="2dp"
                         android:text="IEEE Signal Processing Society,\nUP Section Chapter"/>
                 </LinearLayout>
 
@@ -241,7 +241,7 @@
                         android:gravity="start"
                         android:textSize="12sp"
                         android:textColor="@android:color/black"
-                        android:padding="4dp"
+                        android:padding="2dp"
                         android:text="Science and Engineering Research Board Department of Science and Technology, Government of India"/>
 
                 </LinearLayout>

@@ -46,16 +46,21 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
         holder.otherinfo.setText(schedules.getOtherinfo());
         if (!holder.otherinfo.toString().contains("Venue") || !holder.otherinfo.toString().contains(" "))
         {
-            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_333));
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.coolbg8_2));
         }
         if (schedules.getPapername().trim().toLowerCase().equals("tea break")||schedules.getPapername().trim().toLowerCase().equals("lunch"))
         {
             holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img2_11));
             //holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_free_breakfast_black_24dp));
         }
-        if (schedules.getOtherinfo().trim().length()>12)
+        if (schedules.getOtherinfo().trim().length()>12 && !schedules.getOtherinfo().trim().toLowerCase().contains("venue")&&!schedules.getOtherinfo().trim().toLowerCase().contains("auditorium"))
         {
-            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_111));
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.sidenavbar2));
+
+        }
+        if (schedules.getPapername().trim().toLowerCase().contains("keynote"))
+        {
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.coolbg2_111));
 
         }
 

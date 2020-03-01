@@ -8,7 +8,7 @@
     android:gravity="center_horizontal"
     android:padding="4dp"
     android:weightSum="3"
-    android:background="@drawable/img"
+    android:background="@drawable/almost_final"
     tools:context=".SplashScreenActivity">
 <!--    <ImageView-->
 <!--        android:layout_width="100dp"-->
@@ -17,25 +17,27 @@
 <!--        android:layout_margin="12dp"-->
 <!--        android:src="@drawable/ieeelogo"/>-->
 
-    <ImageView
-        android:layout_width="136dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/jiitlogo"
-        android:id="@+id/logo"
-        android:scaleType="centerInside"/>
+
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
+        android:padding="8dp"
         android:layout_margin="24dp">
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_margin="4dp"
-            android:layout_marginBottom="44dp"
-            android:src="@drawable/jaypee_logo_full"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/jiitlogo"
+            android:id="@+id/logo"
+            android:scaleType="centerInside"/>
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_margin="4dp"-->
+<!--            android:layout_marginBottom="44dp"-->
+<!--            android:src="@drawable/jaypee_logo_full"/>-->
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_width="match_parent"
@@ -44,7 +46,7 @@
         android:paddingTop="68dp"
 
         android:gravity="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/white"
         android:layout_gravity="center_horizontal|bottom"
         android:textStyle="bold|italic"
         android:text="ICSC 2020"
@@ -58,7 +60,7 @@
         android:textSize="20sp"
         android:gravity="center_horizontal|top"
 
-        android:textColor="@color/red"
+        android:textColor="@android:color/white"
         android:id="@+id/title"
         android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"
@@ -77,5 +79,27 @@
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:text="@string/nav_header_subtitle2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_gravity="bottom"
+        android:gravity="bottom|center_horizontal"
+        android:padding="16dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:layout_margin="4dp"
+            android:src="@drawable/ieee_logo_up"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/inserb"
+            />
+    </LinearLayout>
 
 </LinearLayout>
