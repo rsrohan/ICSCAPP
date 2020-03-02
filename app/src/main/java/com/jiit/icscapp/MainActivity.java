@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             calledAlready = true;
-        }        user = FirebaseAuth.getInstance().getCurrentUser();
+        }
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

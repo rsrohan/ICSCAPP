@@ -15,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg4"
+            android:background="@drawable/sidenavbar2"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="100dp"
@@ -33,6 +33,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/nameOfSpeaker"
                     android:text="speaker"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/montserrat"
                     android:textStyle="bold"
                     android:padding="12dp"
                     />
@@ -40,6 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="details"
+                    android:fontFamily="@font/montserrat"
                     android:padding="12dp"
                     android:id="@+id/aboutSpeaker"/>
 

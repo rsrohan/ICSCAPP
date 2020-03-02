@@ -8,4 +8,9 @@
         android:title="@string/logout"
         android:visible="false"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/icon"
+        android:orderInCategory="100"
+        android:title="ICSC 2020"
+        app:showAsAction="always" />
 </menu>

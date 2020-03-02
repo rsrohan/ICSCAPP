@@ -6,7 +6,8 @@
     <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida, INDIA</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="nav_header_subtitle2">March 5th-7th, 2020\nJaypee Institute of Information Technology, Noida, INDIA</string>
+    <string name="nav_header_subtitle2">March 5-7, 2020\nJaypee Institute of Information Technology, Noida(INDIA)</string>
+    <string name="nav_header_title2">2020 6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -42,19 +43,21 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="menu_navigate">Navigate to Location</string>
     <string name="title_activity_maps">GoogleMaps</string>
     <string name="contactUs">Contact Us</string>
-    <string name="icsc_2020">ICSC 2020</string>
+    <string name="icsc_2020">(ICSC 2020)</string>
     <string name="helpline">24x7 Helpline No.\n1-911-2024-00973</string>
-    <string name="technically_co_sponsored_by">Technically Co-Sponsored by:</string>
-    <string name="financially_co_sponsered_by">Financially Co-Sponsered by:</string>
+    <string name="technically_co_sponsored_by">Technical Co-Sponsor:</string>
+    <string name="financially_co_sponsered_by">Financial Co-Sponsor:</string>
     <string name="about_us">About JIIT</string>
     <string name="communicate">Communicate</string>
     <string name="call">call</string>
     <string name="about_jiit_">About JIIT</string>
-
+    <string name="courses">UNDERGRADUATE B.TECH \n\nPOST GRADUATE M. TECH \n\nINTEGRATED B.TECH-M.TECH \n\nMBA COLLEGE IN NOIDA \n\nPHD </string>
+    <string name="site_link"><u>www.jiit.ac.in/</u></string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="explorencr">Explore NCR</string>
     <string name="organisedby">Organised by:</string>
+    <string name="nav_header_subtitle3">March 5-7, 2020</string>
 
 </resources>
