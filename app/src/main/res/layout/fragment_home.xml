@@ -19,7 +19,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:padding="2dp"
                 android:weightSum="3">
 
@@ -29,15 +29,19 @@
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerInside"
                     android:src="@drawable/jiitlogo" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"></ImageView>
 
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="80dp"
                     android:layout_gravity="end"
                     android:layout_marginEnd="4dp"
                     android:src="@drawable/ieeelogo"
-                    android:visibility="gone" />
+                    android:visibility="visible" />
 
             </LinearLayout>
 
@@ -48,6 +52,7 @@
                 android:textSize="16sp"
                 android:gravity="center"
                 android:textColor="#7b0303"
+                android:fontFamily="@font/montserrat"
                 android:textStyle="bold"
                 android:text="@string/nav_header_title2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -57,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:padding="4dp"
                 android:text="@string/icsc_2020"
+                android:fontFamily="@font/montserrat"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp"
                 android:gravity="center"
@@ -69,6 +75,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:gravity="center"
+                android:fontFamily="@font/montserrat"
+
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:text="@string/nav_header_subtitle3" />
@@ -90,7 +98,8 @@
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
                 android:padding="4dp"
-                android:textStyle="bold"
+                android:textStyle="bold"                android:fontFamily="@font/montserrat"
+
                 android:textColor="@android:color/black"
                 android:text="ECE Department\nJaypee Institute of Information Technology, Noida"/>
 
@@ -178,7 +187,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:textSize="14sp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat"
                 android:textStyle="bold|italic"
                 android:layout_gravity="center_vertical|end"
                 android:padding="8dp"
