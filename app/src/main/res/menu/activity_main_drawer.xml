@@ -12,6 +12,10 @@
             android:id="@+id/schedules"
             android:icon="@drawable/ic_schedule_black_24dp"
             android:title="@string/schedules" />
+<!--        <item-->
+<!--            android:id="@+id/posters"-->
+<!--            android:title="Posters Session"-->
+<!--            android:icon="@drawable/ic_image_black_24dp"/>-->
         <item
             android:id="@+id/speakers"
             android:icon="@drawable/ic_people_black_24dp"

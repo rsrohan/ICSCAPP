@@ -60,11 +60,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="4dp"
                 android:text="@string/icsc_2020"
                 android:fontFamily="@font/montserrat"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_weight="3"
@@ -74,34 +73,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:fontFamily="@font/montserrat"
 
                 android:textStyle="bold"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:text="@string/nav_header_subtitle3" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:gravity="center"
-                android:layout_marginLeft="4dp"
-                android:text="@string/organisedby"
-                android:textStyle="bold"/>
-
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:padding="4dp"
-                android:textStyle="bold"                android:fontFamily="@font/montserrat"
-
-                android:textColor="@android:color/black"
-                android:text="ECE Department\nJaypee Institute of Information Technology, Noida"/>
 
 
 
@@ -195,10 +172,33 @@
                 android:justificationMode="inter_word"
                 android:textColor="#000000"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_marginLeft="4dp"
+                android:text="@string/organisedby"
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/black"
+                android:text="Department of ECE\nJaypee Institute of Information Technology, Noida"/>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal">
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -214,6 +214,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
                         android:src="@drawable/ieee_logo_up"
                         android:layout_gravity="start"
                         />
@@ -241,6 +242,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
                         android:src="@drawable/inserb"
                         android:layout_gravity="left"/>
 
@@ -252,7 +254,7 @@
                         android:textSize="12sp"
                         android:textColor="@android:color/black"
                         android:padding="2dp"
-                        android:text="Science and Engineering Research Board Department of Science and Technology, Government of India"/>
+                        android:text="Science and Engineering Research Board, Department of Science and Technology, Government of India"/>
 
                 </LinearLayout>
 
