@@ -55,8 +55,7 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
         }
         if (schedules.getOtherinfo().trim().length()>12 && !schedules.getOtherinfo().trim().toLowerCase().contains("venue")&&!schedules.getOtherinfo().trim().toLowerCase().contains("auditorium"))
         {
-            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.sidenavbar2));
-
+            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_light_5));
         }
         if (schedules.getPapername().trim().toLowerCase().contains("keynote"))
         {
