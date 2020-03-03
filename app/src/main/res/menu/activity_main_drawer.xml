@@ -16,10 +16,10 @@
 <!--            android:id="@+id/posters"-->
 <!--            android:title="Posters Session"-->
 <!--            android:icon="@drawable/ic_image_black_24dp"/>-->
-        <item
-            android:id="@+id/posters"
-            android:title="Posters Session"
-            android:icon="@drawable/jiitlogo"/>
+<!--        <item-->
+<!--            android:id="@+id/posters"-->
+<!--            android:title="Posters Session"-->
+<!--            android:icon="@drawable/jiitlogo"/>-->
         <item
             android:id="@+id/speakers"
             android:icon="@drawable/ic_people_black_24dp"
@@ -28,6 +28,14 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_person_add_black_24dp"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_committee"
+            android:icon="@drawable/ic_person_pin_black_24dp"
+            android:title="Committee"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
 <!--        <item-->
 <!--            android:id="@+id/paperStatus"-->
 <!--            android:icon="@drawable/ic_find_in_page_black_24dp"-->
@@ -36,19 +44,13 @@
             android:id="@+id/prevConf"
             android:icon="@drawable/ic_folder_special_black_24dp"
             android:title="@string/prevConf" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+
 
         <item
             android:id="@+id/about_us"
             android:icon="@drawable/ic_info_outline_black_24dp"
             android:title="@string/about_us" />
-        <item
-            android:id="@+id/nav_committee"
-            android:icon="@drawable/ic_person_pin_black_24dp"
-            android:title="Committee"/>
+
 
     </group>
 
