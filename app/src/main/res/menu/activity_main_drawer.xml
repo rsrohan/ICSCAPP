@@ -36,10 +36,10 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
-<!--        <item-->
-<!--            android:id="@+id/paperStatus"-->
-<!--            android:icon="@drawable/ic_find_in_page_black_24dp"-->
-<!--            android:title="@string/paperStatus" />-->
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/feedBack" />
         <item
             android:id="@+id/prevConf"
             android:icon="@drawable/ic_folder_special_black_24dp"

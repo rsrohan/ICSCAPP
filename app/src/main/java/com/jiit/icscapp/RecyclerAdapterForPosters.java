@@ -57,7 +57,7 @@ public class RecyclerAdapterForPosters extends RecyclerView.Adapter<RecyclerAdap
 //        {
 //            holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.sidenavbar2));
 //        }
-        if (schedules.getPapername().trim().toLowerCase().contains("postersession"))
+        if (schedules.getPapername().trim().toLowerCase().contains("poster session"))
         {
             holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_light_5));
 

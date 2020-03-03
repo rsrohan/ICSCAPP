@@ -108,7 +108,7 @@ public class HomeFragment extends Fragment {
         final List<SliderItem> sliderItemList = new ArrayList<>();
 
         try {
-            for (int i = 1; i <= 15; i++) {
+            for (int i = 1; i <= 20; i++) {
 
                 storageReference.child(i + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override

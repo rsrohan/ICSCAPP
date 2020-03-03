@@ -48,7 +48,7 @@ public class poster_data_fragment extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_poster_data_fragment, container, false);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("SCHEDULES").child(""+day);
+        databaseReference = FirebaseDatabase.getInstance().getReference("POSTERS").child(""+day);
         databaseReference.keepSynced(true);
         recyclerView = v.findViewById(R.id.recyclerViewForPosters);
         recyclerView.setHasFixedSize(true);
