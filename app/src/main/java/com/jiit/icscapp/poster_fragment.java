@@ -51,8 +51,8 @@ public class poster_fragment extends Fragment {
 
 
         ScheduleFragment.Adapter adapter = new ScheduleFragment.Adapter(getChildFragmentManager());
-        adapter.addFragment( new ScheduleDataFragment(0),"Day 1\nMarch 5");
-        adapter.addFragment(new ScheduleDataFragment(1), "Day 2\nMarch 6");
+        adapter.addFragment( new poster_data_fragment(0),"Day 1\nMarch 5");
+        adapter.addFragment(new poster_data_fragment(1), "Day 2\nMarch 6");
 
 
         viewPager.setAdapter(adapter);

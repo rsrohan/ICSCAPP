@@ -1,5 +1,7 @@
 package com.jiit.icscapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -27,12 +30,18 @@ public class CommiteeFragment extends Fragment {
 
     TextView advisory, technical, organising;
     private DatabaseReference databaseReference;
+    LinearLayout ll, ll2, ll3, ll4;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View root =  inflater.inflate(R.layout.fragment_commitee, container, false);
+
+        ll = root.findViewById(R.id.impPeople);
+        ll2 = root.findViewById(R.id.hariompage);
+        ll3 = root.findViewById(R.id.shwetapage);
+        ll4 = root.findViewById(R.id.vikrampage);
 
         advisory = root.findViewById(R.id.advisory);
         technical = root.findViewById(R.id.technical);
@@ -79,6 +88,42 @@ public class CommiteeFragment extends Fragment {
             }
         });
 
+
+        ll2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.jiit.ac.in/director-sector-%E2%80%93-128";
+                Intent web = new Intent(Intent.ACTION_VIEW);
+                web.setData(Uri.parse(url));
+                startActivity(web);
+            }
+        });
+
+        ll3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.jiit.ac.in/prof-shweta-srivastava";
+                Intent web = new Intent(Intent.ACTION_VIEW);
+                web.setData(Uri.parse(url));
+                startActivity(web);
+
+            }
+        });
+
+        ll4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.jiit.ac.in/dr-vikram-karwal";
+                Intent web = new Intent(Intent.ACTION_VIEW);
+                web.setData(Uri.parse(url));
+                startActivity(web);
+
+            }
+        });
+
+
+
+
         organising.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +135,14 @@ public class CommiteeFragment extends Fragment {
                     //technical.setCompoundDrawables(null, null, getResources().getDrawable(R.drawable.ic_arrow_drop_up_black_24dp), null);
 
                     setUpOrg(root, databaseReference.child("ORGANISING"), organisingR);
+                }
+
+                if(ll.getVisibility() == View.VISIBLE){
+                    ll.setVisibility(View.GONE);
+                }
+
+                else{
+                    ll.setVisibility(View.VISIBLE);
                 }
             }
         });

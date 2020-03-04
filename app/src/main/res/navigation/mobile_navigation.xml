@@ -15,11 +15,11 @@
         android:name="com.jiit.icscapp.ScheduleFragment"
         android:label="@string/schedules"
         tools:layout="@layout/fragment_schedule" />
-    <fragment
-        android:id="@+id/posters"
-        android:name="com.jiit.icscapp.poster_fragment"
-        android:label="Poster Session"
-        tools:layout="@layout/fragment_poster"/>
+<!--    <fragment-->
+<!--        android:id="@+id/posters"-->
+<!--        android:name="com.jiit.icscapp.poster_fragment"-->
+<!--        android:label="Poster Session"-->
+<!--        tools:layout="@layout/fragment_poster"/>-->
     <fragment
         android:id="@+id/speakers"
         android:name="com.jiit.icscapp.SpeakersFragment"
@@ -30,6 +30,11 @@
         android:name="com.jiit.icscapp.PaperStatusFragment"
         android:label="@string/paperStatus"
         tools:layout="@layout/fragment_paper_status" />
+    <fragment
+        android:id="@+id/feedback"
+        android:name="com.jiit.icscapp.FeedbackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/fragment_feedback" />
     <fragment
         android:id="@+id/prevConf"
         android:name="com.jiit.icscapp.PrevConfFragment"

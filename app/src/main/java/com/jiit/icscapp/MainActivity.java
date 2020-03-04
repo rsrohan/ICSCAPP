@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (!calledAlready)
-        {
+        if (!calledAlready) {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             calledAlready = true;
         }
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.schedules,R.id.posters, R.id.speakers, R.id.paperStatus,R.id.prevConf , R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_committee,
+                R.id.nav_home, R.id.schedules, R.id.speakers, R.id.paperStatus, R.id.feedback, R.id.prevConf, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_committee,
                 R.id.about_us, R.id.nav_share, R.id.nav_navigate, R.id.nav_send, R.id.nav_explore)
                 .setDrawerLayout(drawer)
                 .build();
@@ -71,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.actionLogout) {
 
-           FirebaseAuth.getInstance().signOut();
-           startActivity(new Intent(this, LoginActivity.class));
-           finish();
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
         }
         return super.onOptionsItemSelected(item);
 

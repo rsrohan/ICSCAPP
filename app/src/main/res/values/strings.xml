@@ -2,12 +2,12 @@
     <string name="app_name">ICSC 2020</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
+    <string name="nav_header_title">6th INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
     <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida, INDIA</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="nav_header_subtitle2">March 5-7, 2020\nJaypee Institute of Information Technology, Noida(INDIA)</string>
-    <string name="nav_header_title2">2020 6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
+    <string name="nav_header_title2">6th INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -29,7 +29,7 @@
     <string name="entermanuallymessage">Enter OTP manually</string>
     <string name="about_jiit">Jaypee Institute of Information Technology (JIIT) was founded in 2001 with the vision of becoming a centre of excellence in the field of IT and related emerging areas of education, training and research comparable to the best in the world for producing professionals who shall be leaders in innovation, entrepreneurship, creativity and management. JIIT has been ranked 80th in the all India rank 2019 in engineering category by NIRF, Ministry of HRD, Government of India.</string>
     <string name="Email">webadmin@jiit.ac.in</string>
-    <string name="main_message">2020 6TH INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION \n
+    <string name="main_message">2020 6th INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION \n
         (ICSC-2020)\n
         March 5th-7th, 2020\n
         Organized by ECE Department\n
@@ -43,10 +43,10 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="menu_navigate">Navigate to Location</string>
     <string name="title_activity_maps">GoogleMaps</string>
     <string name="contactUs">Contact Us</string>
-    <string name="icsc_2020">(ICSC 2020)</string>
+    <string name="icsc_2020">(ICSC-2020)</string>
     <string name="helpline">24x7 Helpline No.\n1-911-2024-00973</string>
-    <string name="technically_co_sponsored_by">Technical Co-Sponsor:</string>
-    <string name="financially_co_sponsered_by">Financial Co-Sponsor:</string>
+    <string name="technically_co_sponsored_by">Technical Co-Sponsor</string>
+    <string name="financially_co_sponsered_by">Financial Co-Sponsor</string>
     <string name="about_us">About JIIT</string>
     <string name="communicate">Communicate</string>
     <string name="call">call</string>
@@ -57,7 +57,8 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="explorencr">Explore NCR</string>
-    <string name="organisedby">Organised by:</string>
+    <string name="organisedby">Organised by</string>
     <string name="nav_header_subtitle3">March 5-7, 2020</string>
+    <string name="feedBack">Feedback</string>
 
 </resources>

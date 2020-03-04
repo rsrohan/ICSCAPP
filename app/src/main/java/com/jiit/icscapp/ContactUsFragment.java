@@ -50,7 +50,7 @@ public class ContactUsFragment extends Fragment {
         email.setText("icsc@jiit.ac.in");
         website.setText("www.jiit.ac.in");
         epbax.setText("(+91)-120-2400973-976");
-        phone.setText("(+91)-120-2594322");
+        phone.setText("+919717652233");
         fax.setText("0120 - 2400986, 0120 - 2401006");
 
         call.setOnClickListener(new View.OnClickListener() {
