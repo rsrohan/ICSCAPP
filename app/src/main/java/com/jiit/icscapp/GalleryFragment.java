@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,6 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.mzelzoghbi.zgallery.ZGallery;
+import com.mzelzoghbi.zgallery.ZGrid;
+import com.mzelzoghbi.zgallery.entities.ZColor;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -45,10 +49,14 @@ public class GalleryFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
-        sliderView = root.findViewById(R.id.imageSlider);
+        //sliderView = root.findViewById(R.id.imageSlider);
 
-        sliderView2 = root.findViewById(R.id.imageSlider2);
+        //sliderView2 = root.findViewById(R.id.imageSlider2);
+        recyclerView = root.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        final ArrayList<String> imageArray = new ArrayList<>();
         databaseReference = FirebaseDatabase.getInstance().getReference("COUNT_FOR_GALLERY_IMAGE");
 
         try {
@@ -60,9 +68,34 @@ public class GalleryFragment extends Fragment {
 
                     try{
                         int x = Integer.parseInt(String.valueOf(dataSnapshot.getValue(Long.class)));
-                        setImageSlider(x);
+                        //setImageSlider(x);
 
-                        setImageSlider2(x);
+                        //setImageSlider2(x);
+                        firebaseStorage = FirebaseStorage.getInstance().getReference("gallery");
+                        try {
+                            for (int i = 1; i <= x; i++) {
+
+                                firebaseStorage.child(i + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @Override
+                                    public void onSuccess(Uri uri) {
+
+                                        imageArray.add(uri.toString());
+
+                                        RecyclerAdapterForGallery r= new RecyclerAdapterForGallery(imageArray, getContext(), getActivity());
+                                        r.notifyDataSetChanged();
+                                        //progressBar.setVisibility(View.GONE);
+                                        recyclerView.setAdapter(r);
+
+
+                                    }
+                                });
+                                //Log.d(TAG, "renewItems: "+storageReference.child(""+i+".jpg").getDownloadUrl().toString());
+                            }
+
+
+                        } catch (Exception e) {
+                            Log.d(TAG, "renewItems: " + e);
+                        }
 
                     }catch (Exception e)
                     {
@@ -79,8 +112,12 @@ public class GalleryFragment extends Fragment {
             });
 
         }catch (Exception e){}
+
         return root;
     }
+
+
+
     private void setImageSlider(int x) {
 
         firebaseStorage = FirebaseStorage.getInstance().getReference("gallery");

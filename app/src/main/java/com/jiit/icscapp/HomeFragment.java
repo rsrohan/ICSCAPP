@@ -47,7 +47,10 @@ public class HomeFragment extends Fragment {
 
         TextView t = root.findViewById(R.id.slidingmessagetop);
         t.setSelected(true);
-        setImageSlider(root);
+        try{
+            setImageSlider(root);
+
+        }catch (Exception Ignored){}
 
         information = root.findViewById(R.id.information);
 

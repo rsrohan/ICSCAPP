@@ -50,7 +50,12 @@ public class AboutUsFragment extends Fragment {
         callBtn = root.findViewById(R.id.aboutCallBtn);
         emailBtn = root.findViewById(R.id.aboutMailBtn);
 
-        setImageSlider(root);
+        try{
+            setImageSlider(root);
+
+        }catch (Exception Ignored){
+
+        }
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -173,6 +178,7 @@ public class AboutUsFragment extends Fragment {
         }
 
     }
+
 
 
 }

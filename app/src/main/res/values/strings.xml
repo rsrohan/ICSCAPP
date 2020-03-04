@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ICSC 2020</string>
+    <string name="app_name">ICSC-2020</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">6th INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
@@ -51,7 +51,7 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="communicate">Communicate</string>
     <string name="call">call</string>
     <string name="about_jiit_">About JIIT</string>
-    <string name="courses">UNDERGRADUATE B.TECH \n\nPOST GRADUATE M. TECH \n\nINTEGRATED B.TECH-M.TECH \n\nMBA COLLEGE IN NOIDA \n\nPHD </string>
+    <string name="courses">UNDERGRADUATE B.TECH \n\nPOST GRADUATE M. TECH \n\nINTEGRATED B.TECH-M.TECH \n\nMBA \n\nPHD </string>
     <string name="site_link"><u>www.jiit.ac.in/</u></string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -60,5 +60,6 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="organisedby">Organised by</string>
     <string name="nav_header_subtitle3">March 5-7, 2020</string>
     <string name="feedBack">Feedback</string>
+    <string name="committees">Committees</string>
 
 </resources>
