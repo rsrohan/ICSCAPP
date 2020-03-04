@@ -52,6 +52,12 @@ public class RecyclerAdapterForGallery extends RecyclerView.Adapter<RecyclerAdap
 
        
 
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showImageDialog(string);
+            }
+        });
 
        
 
@@ -71,6 +77,14 @@ public class RecyclerAdapterForGallery extends RecyclerView.Adapter<RecyclerAdap
             super(itemView);
             image = itemView.findViewById(R.id.galleryimage);
 
+        }
+    }
+    private void showImageDialog(String imagePath) {
+
+        if (imagePath!=null)
+        {
+            ViewReceiptImage viewReceiptImage = new ViewReceiptImage();
+            viewReceiptImage.showDialog(activity, imagePath);
         }
     }
 
