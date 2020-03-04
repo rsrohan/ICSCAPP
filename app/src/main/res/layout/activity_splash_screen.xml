@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:background="@drawable/almost_final"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     android:padding="4dp"
     android:weightSum="3"
-    android:background="@drawable/almost_final"
     tools:context=".SplashScreenActivity">
-<!--    <ImageView-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="76dp"-->
-<!--        android:layout_gravity="end"-->
-<!--        android:layout_margin="12dp"-->
-<!--        android:src="@drawable/ieeelogo"/>-->
+    <!--    <ImageView-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="76dp"-->
+    <!--        android:layout_gravity="end"-->
+    <!--        android:layout_margin="12dp"-->
+    <!--        android:src="@drawable/ieeelogo"/>-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
+        android:layout_margin="24dp"
         android:padding="8dp"
-        android:layout_margin="24dp">
+        app:cardCornerRadius="12dp">
+
         <ImageView
+            android:id="@+id/logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="8dp"
-            android:src="@drawable/jiitlogo"
-            android:id="@+id/logo"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside"
+            android:src="@drawable/jiitlogo" />
         <!--        <ImageView-->
         <!--            android:layout_width="match_parent"-->
         <!--            android:layout_height="64dp"-->
@@ -42,77 +43,80 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:paddingTop="68dp"
+        android:layout_gravity="center_horizontal|bottom"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal|bottom"
-        android:textStyle="bold"
+        android:paddingTop="68dp"
         android:text="ICSC 2020"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
 
 
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center_horizontal|top"
-
-        android:textColor="@android:color/white"
-        android:id="@+id/title"
-        android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
+
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal|top"
         android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        android:textSize="16sp"
         android:layout_gravity="center_horizontal"
-        android:text="@string/nav_header_subtitle2" />
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/nav_header_subtitle2"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_weight="2"
         android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
         android:padding="16dp"
-        android:weightSum="3"
-        android:orientation="horizontal">
+        android:weightSum="3">
+
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp">
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:scaleType="centerInside"
                 android:layout_margin="4dp"
-                android:src="@drawable/ieeelogo"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/ieeelogo" />
         </androidx.cardview.widget.CardView>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3"></ImageView>
+            android:layout_weight="3"
+            android:scaleType="fitXY"></ImageView>
+
         <ImageView
             android:layout_width="100dp"
             android:layout_height="75dp"
-            android:layout_margin="4dp"
             android:layout_gravity="bottom"
-            android:src="@drawable/inserb"
-            />
+            android:layout_margin="4dp"
+            android:src="@drawable/inserb" />
     </LinearLayout>
 
 </LinearLayout>

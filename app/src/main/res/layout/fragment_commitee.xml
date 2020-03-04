@@ -160,7 +160,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="800dp"
                 android:id="@+id/rec_advisory"
                 android:visibility="gone"
                 >
@@ -194,8 +194,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/rec_tech"
+                android:layout_height="800dp"
+
                 android:visibility="gone"
 
                 >
@@ -237,7 +238,7 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="800dp"
                     android:id="@+id/rec_organising"
                     android:visibility="gone"
                     >

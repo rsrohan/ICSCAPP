@@ -62,6 +62,17 @@ public class AppDevelopersFragment extends Fragment {
                 onClickButton(t4.getText().toString());
             }
         });
+        v.findViewById(R.id.email).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "rsrohanverma@gmail.com" });
+                intent.putExtra(Intent.EXTRA_SUBJECT, "ICSC-2020 App query");
+                intent.putExtra(Intent.EXTRA_TEXT, "");
+                startActivity(Intent.createChooser(intent, ""));
+            }
+        });
         return v;
     }
 
