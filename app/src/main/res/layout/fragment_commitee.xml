@@ -7,56 +7,132 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CommiteeFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="8dp"
             android:orientation="vertical">
-            <TextView
-                android:layout_marginTop="16dp"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="General Chair:\nProf. Hariom Gupta"
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:textColor="@android:color/black"/>
+                app:cardCornerRadius="12dp"
+                android:layout_margin="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"                >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="JIIT Noida"
-                android:layout_marginStart="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Prof. Shweta Srivastava"
-                android:textStyle="bold"
-                android:layout_margin="5dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hariompage"
+                    android:padding="4dp"
+                    android:orientation="vertical"
+                    android:clickable="true">
 
-                android:textColor="@android:color/black"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="General Chair:\nProf. Hariom Gupta"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:textColor="@android:color/holo_blue_light"/>
 
-            <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="JIIT Noida"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Department of Electronics and Communication\nJIITNoida"
-                android:layout_marginStart="5dp"/>
-            <TextView
+                app:cardCornerRadius="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_margin="2dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp"
+                    android:id="@+id/shwetapage"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prof. Shweta Srivastava"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+
+                        android:textColor="@android:color/holo_blue_light"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Department of Electronics and Communication\nJIIT Noida"
+                        android:layout_marginStart="5dp"/>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Organizing Secretary:\nDr. Vikram Karwal"
-                android:textStyle="bold"
-                android:layout_margin="5dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
 
-                android:textColor="@android:color/black"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/vikrampage"
+                    android:padding="4dp"
+                    android:clickable="true">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Department of Electronics and Communication\nJIIT Noida"
-                android:layout_marginStart="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Organizing Secretary:\nDr. Vikram Karwal"
+                        android:textStyle="bold"
+
+                        android:layout_margin="5dp"
+
+                        android:textColor="@android:color/holo_blue_light"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Department of Electronics and Communication\nJIIT Noida"
+                        android:layout_marginStart="5dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -90,6 +166,7 @@
                 >
 
             </androidx.recyclerview.widget.RecyclerView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,45 +201,62 @@
                 >
 
             </androidx.recyclerview.widget.RecyclerView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/organising"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:layout_marginEnd="24dp"
-                    android:text="Organising Committee"
-                    android:textStyle="bold"
-                    android:drawablePadding="16dp"
-                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
-                    android:layout_margin="5dp"
-                    />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/organising"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="24dp"
+                        android:text="Organising Committee"
+                        android:textStyle="bold"
+                        android:drawablePadding="16dp"
+                        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:layout_margin="5dp"
+                        />
+
+
+
             </androidx.cardview.widget.CardView>
 
-
-
-
-            <androidx.recyclerview.widget.RecyclerView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/rec_organising"
-                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/impPeople"
+                android:visibility="visible">
 
-                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rec_organising"
+                    android:visibility="gone"
+                    >
 
-            </androidx.recyclerview.widget.RecyclerView>
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+
 
 
         </LinearLayout>
 
-    </ScrollView>
+
+</ScrollView>
+
+
+
+
 
 
 
