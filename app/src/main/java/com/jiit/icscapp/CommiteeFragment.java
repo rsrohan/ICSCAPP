@@ -136,6 +136,14 @@ public class CommiteeFragment extends Fragment {
 
                     setUpOrg(root, databaseReference.child("ORGANISING"), organisingR);
                 }
+
+                if(ll.getVisibility() == View.VISIBLE){
+                    ll.setVisibility(View.GONE);
+                }
+
+                else{
+                    ll.setVisibility(View.VISIBLE);
+                }
             }
         });
         return root;
