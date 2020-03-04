@@ -15,6 +15,49 @@
             android:layout_height="match_parent"
             android:padding="8dp"
             android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General Chair:\nProf. Hariom Gupta"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JIIT Noida"
+                android:layout_marginStart="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prof. Shweta Srivastava"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Department of Electronics and Communication\nJIITNoida"
+                android:layout_marginStart="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Organizing Secretary:\nDr. Vikram Karwal"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Department of Electronics and Communication\nJIIT Noida"
+                android:layout_marginStart="5dp"/>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -116,48 +159,6 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="General Chair:\nProf. Hariom Gupta"
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-
-                android:textColor="@android:color/black"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="JIIT Noida"
-                android:layout_marginStart="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Prof. Shweta Srivastava"
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-
-                android:textColor="@android:color/black"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Department of Electronics and Communication\nJIITNoida"
-                android:layout_marginStart="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Organizing Secretary:\nDr. Vikram Karwal"
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-
-                android:textColor="@android:color/black"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Department of Electronics and Communication\nJIIT Noida"
-                android:layout_marginStart="5dp"/>
 
         </LinearLayout>
 

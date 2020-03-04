@@ -48,7 +48,7 @@ public class RecyclerAdapterForSchedules extends RecyclerView.Adapter<RecyclerAd
         {
             holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img_light_5));
         }
-        if (schedules.getPapername().trim().toLowerCase().equals("tea break")||schedules.getPapername().trim().toLowerCase().equals("lunch"))
+        if (schedules.getPapername().trim().toLowerCase().equals("tea break")||schedules.getPapername().trim().toLowerCase().equals("lunch")||schedules.getPapername().trim().toLowerCase().equals("dinner"))
         {
             holder.linearLayout.setBackground(context.getResources().getDrawable(R.drawable.img2_11));
             //holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_free_breakfast_black_24dp));

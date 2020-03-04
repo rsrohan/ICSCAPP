@@ -3,7 +3,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">6th INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION</string>
-    <string name="nav_header_subtitle">March 5th-7th, 2020\nOrganized by ECE Department\nJaypee Institute of Information Technology, Noida, INDIA</string>
+    <string name="nav_header_subtitle">March 5-7, 2020\n\nOrganized by Department of ECE \nJaypee Institute of Information Technology, Noida, INDIA</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="nav_header_subtitle2">March 5-7, 2020\nJaypee Institute of Information Technology, Noida(INDIA)</string>
@@ -31,8 +31,8 @@
     <string name="Email">webadmin@jiit.ac.in</string>
     <string name="main_message">2020 6th INTERNATIONAL CONFERENCE ON SIGNAL PROCESSING AND COMMUNICATION \n
         (ICSC-2020)\n
-        March 5th-7th, 2020\n
-        Organized by ECE Department\n
+        March 5-7, 2020\n
+        Organized by \nDepartment of ECE\n
 Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     LOGIN TO CONTINUE</string>
     <string name="speakers">Keynote Speakers</string>
@@ -61,5 +61,6 @@ Jaypee Institute of Information Technology, Noida (INDIA)\n\n
     <string name="nav_header_subtitle3">March 5-7, 2020</string>
     <string name="feedBack">Feedback</string>
     <string name="committees">Committees</string>
+    <string name="AppDevelopers">About the App</string>
 
 </resources>
